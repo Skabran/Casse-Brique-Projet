@@ -1,4 +1,4 @@
-
+#include jeu.h
 #include <iostream>
 
 using namespace std;
