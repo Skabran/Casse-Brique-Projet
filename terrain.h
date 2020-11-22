@@ -10,10 +10,11 @@ public:
     terrain(int longueur, int largeur); // pas utilisé pour le moment
     ~terrain();
     void modifierGrille(int longueur, int largeur); // potentiellmeent d'autres variables a ajouter
+    bool testCollision();
+    bool testPartieFinie();
 
 private:
-    std::vector<std::vector<position>> d_grille;
-    std::vector<element> d_tableauElements;
+    std::vector<std::vector<elements>> d_grille;
 
 };
 
