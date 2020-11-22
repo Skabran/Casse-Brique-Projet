@@ -1,0 +1,52 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#Clion
+.idea
+cmake-build-debug
+
+#GDrive
+desktop.ini
+
+#Visual Studio
+.vs
+Casse-Brique-Projet.vcxproj.user
+Casse-Brique-Projet.vcxproj.filters
+Casse-Brique-Projet.json
+Casse-Brique-Projet.sln
+Casse-Brique-Projet.vcxproj
+
+#CodeBlocks
+Casse-Brique-Projet.layout
+Casse_brique.depend
+Casse-Brique-Projet.vcxproj.xml

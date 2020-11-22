@@ -40,6 +40,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="mainTest.cpp" />
 		<Unit filename="mur.h" />
+		<Unit filename="position.h" />
 		<Unit filename="raquette.h" />
 		<Unit filename="terrain.h" />
 		<Unit filename="winbgi.cpp" />

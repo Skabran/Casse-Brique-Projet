@@ -6,11 +6,11 @@ class jeu{
 public:
     jeu();
     ~jeu();
-    void iniTerrain();
+    void iniTerrain(); //lit un terrain dans un fichier
     void lancerPartie(); //boucle de jeu
 
 private :
-    terrain terrainDeJeu;
+    terrain d_terrainDeJeu;
 
 };
 
