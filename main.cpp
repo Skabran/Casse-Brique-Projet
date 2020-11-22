@@ -1,5 +1,5 @@
-#include jeu.h
 #include <iostream>
+#include "jeu.h"
 
 using namespace std;
 
@@ -27,7 +27,7 @@ bool menuPrincipal() {
 	cout << "2\t - Parametres partie" << endl;
     int choix;
 	cout << "0-2 : ";
-    cin >> i;
+    cin >> choix;
     switch (choix) {
         case 1:
             lancerPartie();
@@ -46,6 +46,6 @@ bool menuPrincipal() {
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    cout << "Hello " << endl;
     return 0;
 }

@@ -32,10 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="balle.h" />
+		<Unit filename="brique.h" />
+		<Unit filename="element.h" />
 		<Unit filename="graphics.h" />
 		<Unit filename="jeu.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mainTest.cpp" />
+		<Unit filename="mur.h" />
+		<Unit filename="raquette.h" />
+		<Unit filename="terrain.h" />
 		<Unit filename="winbgi.cpp" />
 		<Extensions>
 			<code_completion />
