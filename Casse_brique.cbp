@@ -34,17 +34,22 @@
 		</Compiler>
 		<Unit filename="balle.h" />
 		<Unit filename="brique.h" />
+		<Unit filename="element.cpp" />
 		<Unit filename="element.h" />
+		<Unit filename="elementMouvant.cpp" />
+		<Unit filename="elementMouvant.h" />
 		<Unit filename="graphics.h" />
 		<Unit filename="jeu.cpp" />
 		<Unit filename="jeu.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mainTest.cpp" />
-		<Unit filename="mur.h" />
+		<Unit filename="position.cpp" />
 		<Unit filename="position.h" />
 		<Unit filename="raquette.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
+		<Unit filename="vecteur.cpp" />
+		<Unit filename="vecteur.h" />
 		<Unit filename="winbgi.cpp" />
 		<Extensions>
 			<code_completion />

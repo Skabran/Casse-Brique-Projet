@@ -1,7 +1,8 @@
 #ifndef RAQUETTE_H
 #define RAQUETTE_H
+#include "elementMouvant.h"
 
-class raquette{
+class raquette : public elementMouvant{
 
 };
 

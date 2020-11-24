@@ -6,7 +6,7 @@ class jeu{
 public:
     jeu();
     ~jeu();
-    void iniTerrain(); //lit un terrain dans un fichier
+    void litTerrain(); //lit un terrain dans un fichier texte
     void lancerPartie(); //boucle de jeu
 
 private :

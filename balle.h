@@ -1,7 +1,8 @@
 #ifndef BALLE_H
 #define BALLE_H
+#include "elementMouvant.h"
 
-class balle{
+class balle : public elementMouvant{
 
 };
 

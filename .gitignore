@@ -40,13 +40,13 @@ desktop.ini
 
 #Visual Studio
 .vs
-Casse-Brique-Projet.vcxproj.user
-Casse-Brique-Projet.vcxproj.filters
-Casse-Brique-Projet.json
-Casse-Brique-Projet.sln
-Casse-Brique-Projet.vcxproj
+Casse-Brique.vcxproj.user
+Casse-Brique.vcxproj.filters
+Casse-Brique.json
+Casse-Brique.sln
+Casse-Brique.vcxproj
 
 #CodeBlocks
-Casse-Brique-Projet.layout
+Casse_brique.layout
 Casse_brique.depend
-Casse-Brique-Projet.vcxproj.xml
+Casse_brique.vcxproj.xml

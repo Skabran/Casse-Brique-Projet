@@ -1,7 +1,8 @@
 #ifndef BRIQUE_H
 #define BRIQUE_H
+#include "element"
 
-class brique{
+class brique : public element{
 
 };
 
