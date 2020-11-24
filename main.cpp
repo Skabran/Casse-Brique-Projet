@@ -8,7 +8,7 @@ jeu jeuPrincipal{};
 
 void lancerPartie()
 {
-
+    //jeuPrincipal.lancerBoucleJeu();
 }
 
 void lancerChoixParametres()

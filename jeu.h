@@ -7,7 +7,7 @@ public:
     jeu();
     ~jeu();
     void litTerrain(); //lit un terrain dans un fichier texte
-    void lancerPartie(); //boucle de jeu
+    void lancerBoucleJeu();
 
 private :
     terrain d_terrainDeJeu;

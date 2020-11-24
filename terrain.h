@@ -8,9 +8,7 @@
 class terrain{
 public:
     terrain();
-    terrain(int longueur, int largeur); // pas utilisé pour le moment
     ~terrain();
-    void modifierGrille(int longueur, int largeur); // potentiellement d'autres variables a ajouter
     bool testCollision() const;
     bool testPartieFinie() const;
     void deplacerElementMouvant();  //Appelle deplacer dans tous les elements du tableau d'élément mouvant
