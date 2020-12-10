@@ -34,7 +34,9 @@
 		</Compiler>
 		<Unit filename="affichageJeu.cpp" />
 		<Unit filename="affichageJeu.h" />
+		<Unit filename="balle.cpp" />
 		<Unit filename="balle.h" />
+		<Unit filename="brique.cpp" />
 		<Unit filename="brique.h" />
 		<Unit filename="element.cpp" />
 		<Unit filename="element.h" />
@@ -47,6 +49,7 @@
 		<Unit filename="mainTest.cpp" />
 		<Unit filename="position.cpp" />
 		<Unit filename="position.h" />
+		<Unit filename="raquette.cpp" />
 		<Unit filename="raquette.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
