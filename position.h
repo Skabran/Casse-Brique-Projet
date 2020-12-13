@@ -1,6 +1,7 @@
 #ifndef POSITION_H
 #define POSITION_H
 #include <iostream>
+#include "vecteur.h"
 
 class position
 {
@@ -13,6 +14,7 @@ public:
     void affiche(std::ostream& ost) const;
     void lit(std::istream& ist);
     bool operator==(const position& pos) const;
+    position operator+(const vecteur& vect);
 
 
 private:
@@ -21,6 +23,7 @@ private:
 };
 std::ostream& operator<<(std::ostream& ost, const position& pos);
 std::istream& operator>>(std::istream& ist, position& pos);
+position operator+(const vecteur& vect, position& pos);
 
 #endif // POSITION_H
 

@@ -1,6 +1,7 @@
 
 #include "position.h"
 #include <iostream>
+#include <cmath>
 
 position::position(): d_x{0.0}, d_y{0.0} {}
 
@@ -42,6 +43,12 @@ bool position::operator==(const position& pos) const
     return false;
 }
 
+position position::operator+(const vecteur& vect){
+    d_x +=cos(vect.getAngle());
+    d_y +=sin(vect.getAngle());
+    return *this;
+}
+
 std::ostream& operator<<(std::ostream& ost, const position& pos)
 {
     pos.affiche(ost);
@@ -50,4 +57,11 @@ std::ostream& operator<<(std::ostream& ost, const position& pos)
 std::istream& operator>>(std::istream& ist, position& pos)
 {
     pos.lit(ist);
+}
+
+position operator+(const vecteur& vect, position& pos){
+    double nouveauX = pos.valeurX() + cos(vect.getAngle());
+    double nouveauY = pos.valeurY() + sin(vect.getAngle());
+    pos.changePosition(nouveauX,nouveauY);
+    return pos;
 }
