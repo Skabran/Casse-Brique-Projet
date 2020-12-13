@@ -3,25 +3,12 @@
 
 using namespace std;
 
-jeu jeuPrincipal{};
-
-
-void lancerPartie()
-{
-    //jeuPrincipal.lancerBoucleJeu();
-}
-
-void lancerChoixParametres()
-{
-
-}
-
 void quitter()
 {
 
 }
 
-bool menuPrincipal() {
+bool menuPrincipal(jeu& jeu1) {
     cout << endl << "Menu principal : " << endl << endl;
 	cout << "1\t - Lancer une partie" << endl;
 	cout << "2\t - Parametres partie" << endl;
@@ -30,10 +17,10 @@ bool menuPrincipal() {
     cin >> choix;
     switch (choix) {
         case 1:
-            lancerPartie();
+            jeu1.lancerBoucleJeu();
             break;
         case 2:
-            lancerChoixParametres();
+            jeu1.choixParametre();
             break;
         case 0:
             quitter();
@@ -44,11 +31,15 @@ bool menuPrincipal() {
     return true;
 }
 
+
 int main()
 {
-    cout << "Hello " << endl;
+    jeu jeuPrincipal{};
+    menuPrincipal(jeuPrincipal);
     return 0;
 }
+
+
 /*
 void test()
 {
