@@ -3,7 +3,12 @@
 #include "elementMouvant.h"
 
 class balle : public elementMouvant{
-
+public:
+    balle();
+    balle(double x, double y);
+    balle(double x, double y, double vitesse, double angle);
+    ~balle();
+    void collision() override final;
 };
 
 #endif // BALLE_H

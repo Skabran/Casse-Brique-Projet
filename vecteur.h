@@ -5,6 +5,7 @@
 class vecteur{
 public :
     vecteur();
+    vecteur(double vitesse, double angle);
     ~vecteur();
     double getVitesse() const;
     double getAngle() const;

@@ -1,5 +1,3 @@
-#ifndef RAQUETTE_H
-#define RAQUETTE_H
 #include "elementMouvant.h"
 
 /*
@@ -60,4 +58,4 @@ void raquette::miseAJour()
 }
 
 */
-#endif
+

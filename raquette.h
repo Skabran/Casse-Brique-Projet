@@ -3,6 +3,10 @@
 #include "elementMouvant.h"
 
 class raquette : public elementMouvant{
+public:
+
+private:
+
 
 };
 

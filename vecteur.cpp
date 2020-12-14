@@ -2,6 +2,8 @@
 
 vecteur::vecteur(): d_vitesse{}, d_angle{} {}
 
+vecteur::vecteur(double vitesse, double angle): d_vitesse{vitesse}, d_angle{angle} {}
+
 vecteur::~vecteur()= default;
 
 

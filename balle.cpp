@@ -1,6 +1,17 @@
-#ifndef BALLE_H
-#define BALLE_H
-#include "elementMouvant.h"
+#include "balle.h"
+
+balle::balle(): elementMouvant{} {}
+
+balle::balle(double x, double y): elementMouvant{x, y} {}
+
+balle::balle(double x, double y, double vitesse, double angle): elementMouvant{x, y, vitesse, angle} {}
+
+balle::~balle() = default;
+
+void balle::collision() {
+
+}
+
 /*
 balle::balle() : d_x{5}, d_y{5}, d_rayon{5}, d_color{RED}
 {
@@ -51,4 +62,3 @@ double balle::bas()
     return y() + d_rayon;
 }
 */
-#endif

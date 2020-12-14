@@ -1,9 +1,13 @@
 #ifndef BRIQUE_H
 #define BRIQUE_H
-#include "element"
+#include "element.h"
 
 class brique : public element{
-
+public:
+    brique();
+    brique(double x, double y);
+    ~brique();
+    void collision() override;
 };
 
 #endif // BRIQUE_H

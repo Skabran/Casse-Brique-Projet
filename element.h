@@ -5,8 +5,10 @@
 class element{
 public:
     element();
+    element(double x, double y);
     virtual ~element();
     position getPosition() const;
+    virtual void collision() = 0;
 
 
 private:

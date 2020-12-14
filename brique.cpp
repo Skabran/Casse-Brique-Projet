@@ -1,6 +1,16 @@
-#ifndef BALLE_H
-#define BALLE_H
-#include "elementMouvant.h"
+#include "brique.h"
+
+
+brique::brique(): element{} {}
+
+brique::brique(double x, double y): element{x, y} {}
+
+brique::~brique() = default;
+
+void brique::collision(){
+
+}
+
 
 /*
 brique::brique(double coordX, double coordY):d_x{coordX}, d_y{coordY}, d_longueur{longueurBrique}, d_largueur{largeurBrique}, d_color{YELLOW}
@@ -15,7 +25,7 @@ bool brique::detruite()
 }
 
 */
-#endif // BRIQUE_H
+
 
 /*
 idée classe collision

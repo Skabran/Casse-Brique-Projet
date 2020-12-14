@@ -3,6 +3,8 @@
 
 element::element(): d_positionElement{} {}
 
+element::element(double x, double y) : d_positionElement{x, y} {}
+
 element::~element() = default;
 
 position element::getPosition() const{
