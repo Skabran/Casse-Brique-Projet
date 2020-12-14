@@ -4,9 +4,15 @@
 
 class raquette : public elementMouvant{
 public:
+    raquette();
+    raquette(double x, double y, double longueur, double largeur);
+    ~raquette();
+    void deplacer() override final;
+    void collision() override final;
 
 private:
-
+    double d_longueur;
+    double d_largeur;
 
 };
 

@@ -5,10 +5,13 @@
 class balle : public elementMouvant{
 public:
     balle();
-    balle(double x, double y);
-    balle(double x, double y, double vitesse, double angle);
+    balle(double x, double y, double rayon);
+    balle(double x, double y, double vitesse, double angle, double rayon);
     ~balle();
+    void deplacer() override final;
     void collision() override final;
+private:
+    double d_rayon;
 };
 
 #endif // BALLE_H

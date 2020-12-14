@@ -1,14 +1,19 @@
 #include "balle.h"
 
-balle::balle(): elementMouvant{} {}
+balle::balle(): elementMouvant{}, d_rayon{1.0} {}
 
-balle::balle(double x, double y): elementMouvant{x, y} {}
+balle::balle(double x, double y, double rayon): elementMouvant{x, y}, d_rayon{rayon} {}
 
-balle::balle(double x, double y, double vitesse, double angle): elementMouvant{x, y, vitesse, angle} {}
+balle::balle(double x, double y, double vitesse, double angle, double rayon): elementMouvant{x, y, vitesse, angle},
+d_rayon{rayon} {}
 
 balle::~balle() = default;
 
 void balle::collision() {
+
+}
+
+void balle::deplacer(){
 
 }
 

@@ -5,9 +5,12 @@
 class brique : public element{
 public:
     brique();
-    brique(double x, double y);
+    brique(double x, double y, double longueur, double largeur);
     ~brique();
     void collision() override;
+private:
+    double d_longueur;
+    double d_largeur;
 };
 
 #endif // BRIQUE_H

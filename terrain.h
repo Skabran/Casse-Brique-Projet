@@ -12,6 +12,8 @@ public:
     bool testCollision() const;
     bool testPartieFinie() const;
     void deplacerElementMouvant();  //Appelle deplacer dans tous les elements du tableau d'élément mouvant
+    void ajouterElementFixe();
+    void ajouterElementMouvant();
 
 private:
     std::vector<element> d_tableauElement;
