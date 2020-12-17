@@ -3,20 +3,23 @@
 #include "elementMouvant.h"
 
 /**
-Classe représentant la balle
+Classe représentant la balle. Elle herite d'un elementMouvant
 */
 class balle : public elementMouvant{
 public:
 ///Constructeur par default balle (0,0) de rayon 1
     balle();
+
 ///Constructeur de balle de position (x,y) et de rayon "rayon"
     balle(double x, double y, double rayon);
+
 ///Constructeur de balle de position (x,y)  de rayon "rayon". Construit aussi son vecteur (vitesse, angle)
     balle(double x, double y, double vitesse, double angle, double rayon);
+
 ///Destructeur par default de balle
     ~balle();
 
-/** */
+/** A FAIRE */
     bool collision() override final;
 
 /**

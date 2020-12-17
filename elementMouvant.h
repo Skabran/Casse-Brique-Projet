@@ -10,7 +10,7 @@ public:
     elementMouvant(double x, double y, double vitesse, double angle);
     virtual ~elementMouvant();
     virtual void deplacer() = 0;
-    virtual void collision() override = 0;
+    virtual bool collision() override = 0;
 
 private:
     vecteur d_vecteurVitesse;

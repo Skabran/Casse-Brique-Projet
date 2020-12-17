@@ -7,7 +7,7 @@ d_longueur{longueur}, d_largeur{largeur} {}
 
 raquette::~raquette() = default;
 
-void raquette::collision(){
+bool raquette::collision(){
 
 }
 

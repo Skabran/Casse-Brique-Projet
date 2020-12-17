@@ -8,7 +8,7 @@ d_longueur{longueur}, d_largeur{largeur} {}
 
 brique::~brique() = default;
 
-void brique::collision(){
+bool brique::collision(){
 
 }
 

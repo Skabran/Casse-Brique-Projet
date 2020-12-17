@@ -8,7 +8,7 @@ public:
     element(double x, double y);
     virtual ~element();
     position getPosition() const;
-    virtual void collision() = 0;
+    virtual bool collision() = 0;
 
 
 private:
