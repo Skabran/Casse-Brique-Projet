@@ -7,6 +7,8 @@ position::position(): d_x{0.0}, d_y{0.0} {}
 
 position::position(double x, double y): d_x{x}, d_y{y} {}
 
+position::~position() = default;
+
 double position::valeurX() const
 {
     return d_x;

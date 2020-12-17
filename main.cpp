@@ -26,7 +26,7 @@ bool menuPrincipal(jeu& jeu1) {
             quitter();
             return false;
         default:
-	        cout << "Entrez un nombre entre 0 et 11" << endl;
+	        cout << "Entrez un nombre entre 0 et 2" << endl;
     }
     return true;
 }

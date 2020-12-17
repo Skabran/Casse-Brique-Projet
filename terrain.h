@@ -11,7 +11,7 @@ public:
     ~terrain();
     bool testCollision() const;
     bool testPartieFinie() const;
-    void deplacerElementMouvant();  //Appelle deplacer dans tous les elements du tableau d'élément mouvant
+    void deplacerElementMouvant();  //Appelle deplacer dans tous les elements du tableau d'éléments mouvant
     void ajouterElementFixe();
     void ajouterElementMouvant();
 
