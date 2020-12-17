@@ -1,19 +1,17 @@
 #include "vecteur.h"
 
-vecteur::vecteur(): d_vitesse{}, d_angle{} {}
+vecteur::vecteur(): d_vitesse{1.0}, d_angle{0.0} {}
 
 vecteur::vecteur(double vitesse, double angle): d_vitesse{vitesse}, d_angle{angle} {}
 
 vecteur::~vecteur()= default;
 
-
+double vecteur::getVitesse() const{
+    return d_vitesse;
+}
 
 double vecteur::getAngle() const{
     return d_angle;
-}
-
-double vecteur::getVitesse() const{
-    return d_vitesse;
 }
 
 void vecteur::multiplieVitesse(double coef){

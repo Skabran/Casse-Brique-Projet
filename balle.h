@@ -2,6 +2,9 @@
 #define BALLE_H
 #include "elementMouvant.h"
 
+/**
+Classe représentant la balle
+*/
 class balle : public elementMouvant{
 public:
 ///Constructeur par default balle (0,0) de rayon 1
@@ -22,6 +25,7 @@ Déplace la balle en additionnant son vecteur vitesse a sa position et en mettant
     void deplacer() override final;
 
 private:
+/**Taille du rayon de la balle*/
     double d_rayon;
 };
 
