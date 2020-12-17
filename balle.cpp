@@ -9,7 +9,7 @@ d_rayon{rayon} {}
 
 balle::~balle() = default;
 
-void balle::collision() {
+bool balle::collision() {
 
 }
 

@@ -4,12 +4,23 @@
 
 class balle : public elementMouvant{
 public:
+///Constructeur par default balle (0,0) de rayon 1
     balle();
+///Constructeur de balle de position (x,y) et de rayon "rayon"
     balle(double x, double y, double rayon);
+///Constructeur de balle de position (x,y)  de rayon "rayon". Construit aussi son vecteur (vitesse, angle)
     balle(double x, double y, double vitesse, double angle, double rayon);
+///Destructeur par default de balle
     ~balle();
+
+/** */
+    bool collision() override final;
+
+/**
+Déplace la balle en additionnant son vecteur vitesse a sa position et en mettant a jour sa position
+*/
     void deplacer() override final;
-    void collision() override final;
+
 private:
     double d_rayon;
 };
