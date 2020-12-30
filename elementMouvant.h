@@ -23,6 +23,7 @@ Methode virtuelle. Permet aux elementMouvant de se déplacer en faisant vairier l
     virtual void deplacer() = 0;
 
 /**
+Methode virtuelle
 A FAIRE
 */
     virtual bool collision() override = 0;
