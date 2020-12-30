@@ -46,10 +46,10 @@ Ajoute un element mouvant dans le tableau d'element mouvant et dans le tableau d
 
 private:
 /** Tableau comprenant tout les elements du terrain */
-    std::vector<*element> d_tableauElement;
+    std::vector<element*> d_tableauElement;
 
 /** Tableau comprenant tout les elements mouvant du terrain */
-    std::vector<*elementMouvant> d_tableauElementMouvant;
+    std::vector<elementMouvant*> d_tableauElementMouvant;
 
 };
 
