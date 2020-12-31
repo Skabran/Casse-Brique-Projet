@@ -18,7 +18,7 @@ public:
     virtual ~elementMouvant();
 
 /**
-Methode virtuelle. Permet aux elementMouvant de se déplacer en faisant vairier leur position
+Methode virtuelle. Permet aux elementMouvant de se déplacer en faisant varier leur position
 */
     virtual void deplacer() = 0;
 

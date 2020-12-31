@@ -17,11 +17,21 @@ public:
     ~terrain();
 
 /**
-Test si l'élément mouvant numéro numeroElement entre en collision avec un element du tableau d'element
-    @param[in] numeroElement _ Numero de l'element dont on veut tester les collisions (la balle)
+Renvoi le nombre de balle sur le terrain
+*/
+    int getNbBalle() const;
+
+/**
+Renvoi la précision souhaité pour le calcul des collisions
+*/
+    int getPrecisionCollision() const;
+
+/**
+Test si la ou les balles entre en collision avec d'autre element du terrain.
+Elle changent leur vecteur vitesse si c'est le cas.
     @return vrai si il y a collision, faux sinon
 */
-    bool testCollision(int numeroElement) const;
+    bool testCollision() const;
 
 /**
 Test si la partie est finie. C'est a dire plus de brique ou position de la balle sous la position de la raquette
@@ -45,6 +55,12 @@ Ajoute un element mouvant dans le tableau d'element mouvant et dans le tableau d
     void ajouterElementMouvant();
 
 private:
+/** Nombre de balles dans le jeu */
+    int d_nbBalle;
+
+/** Precision de souhaité pour les test de collision */
+    int d_precisionCollision;
+
 /** Tableau comprenant tout les elements du terrain */
     std::vector<element*> d_tableauElement;
 

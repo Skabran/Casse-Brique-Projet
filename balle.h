@@ -23,7 +23,7 @@ public:
     bool collision() override final;
 
 /**
-Déplace la balle en additionnant son vecteur vitesse a sa position et en mettant a jour sa position
+Déplace la balle en additionnant son vecteur vitesse à sa position et en mettant à jour sa position
 */
     void deplacer() override final;
 
