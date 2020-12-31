@@ -8,3 +8,8 @@ elementMouvant::elementMouvant(double x, double y, double vitesse, double angle)
 d_vecteurVitesse{vitesse, angle} {}
 
 elementMouvant::~elementMouvant() = default;
+
+vecteur elementMouvant::getVecteur() const
+{
+    return d_vecteurVitesse;
+}

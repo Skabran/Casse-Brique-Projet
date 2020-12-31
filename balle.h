@@ -20,7 +20,7 @@ public:
     ~balle();
 
 /** A FAIRE */
-    bool collision() override final;
+    bool collision(position posElementMouvant) override final;
 
 /**
 Déplace la balle en additionnant son vecteur vitesse à sa position et en mettant à jour sa position

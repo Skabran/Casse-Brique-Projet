@@ -24,7 +24,7 @@ Retourne la position de l'element
 Methode virtuelle
 A FAIRE
 */
-    virtual bool collision() = 0;
+    virtual bool collision(position posElementMouvant) = 0;
 
 
 private:

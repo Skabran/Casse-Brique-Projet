@@ -8,7 +8,7 @@ d_longueur{longueur}, d_largeur{largeur} {}
 
 brique::~brique() = default;
 
-bool brique::collision(){
+bool brique::collision(position posElementMouvant){
 
 }
 

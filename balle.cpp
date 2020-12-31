@@ -9,7 +9,7 @@ d_rayon{rayon} {}
 
 balle::~balle() = default;
 
-bool balle::collision() {
+bool balle::collision(position posElementMouvant) {
 
 }
 

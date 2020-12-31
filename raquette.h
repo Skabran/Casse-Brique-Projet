@@ -33,7 +33,7 @@ s remise au centre
 /**
 A FAIRE
 */
-    bool collision() override final;
+    bool collision(position posElementMouvant) override final;
 
 private:
 /** Valeur de la longueur de la raquette */

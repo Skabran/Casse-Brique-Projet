@@ -1,6 +1,7 @@
 #ifndef BRIQUE_H
 #define BRIQUE_H
 #include "element.h"
+#include "position.h"
 
 /**
 Classe de la brique de base du jeu. Herite de la classe element
@@ -17,7 +18,7 @@ public:
 /**
 A FAIRE
 */
-    bool collision() override;
+    bool collision(position posElementMouvant) override;
 
 
 private:

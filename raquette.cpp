@@ -7,7 +7,7 @@ d_longueur{longueur}, d_largeur{largeur} {}
 
 raquette::~raquette() = default;
 
-bool raquette::collision(){
+bool raquette::collision(position posElementMouvant){
 
 }
 

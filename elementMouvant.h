@@ -17,6 +17,13 @@ public:
 ///Destructeur par default
     virtual ~elementMouvant();
 
+
+/**
+Renvoi le vecteur vitesse de l'element mouvant
+*/
+    vecteur getVecteur() const;
+
+
 /**
 Methode virtuelle. Permet aux elementMouvant de se déplacer en faisant varier leur position
 */
@@ -26,7 +33,7 @@ Methode virtuelle. Permet aux elementMouvant de se déplacer en faisant varier le
 Methode virtuelle
 A FAIRE
 */
-    virtual bool collision() override = 0;
+    virtual bool collision(position posElementMouvant) override = 0;
 
 private:
 /** vecteur vitesse de l'element mouvant */
