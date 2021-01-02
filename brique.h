@@ -37,12 +37,3 @@ private:
 };
 
 #endif // BRIQUE_H
-
-/*
-class brique : public rectangle
-{
-    public:
-        bool detruite() = false;
-        brique(double coordX, double coordY);
-};
-*/
