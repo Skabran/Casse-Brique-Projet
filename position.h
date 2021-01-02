@@ -60,6 +60,12 @@ Operateur + : additionne un point et un vecteur
 */
     position operator+(const vecteur& vect);
 
+/**
+Operateur = : remplace les x et y de la première position par ceux de la seconde
+    @param[in] pos - position a copier
+    @return la position dont les parametres sont changés
+*/
+    position& operator=(const position& pos);
 
 private:
     /** Coordonnées x */

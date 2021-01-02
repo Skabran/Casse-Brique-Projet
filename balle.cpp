@@ -9,7 +9,12 @@ d_rayon{rayon} {}
 
 balle::~balle() = default;
 
-bool balle::collision(position posElementMouvant) {
+bool balle::testDeCollision(position posElementMouvant) {
+
+}
+
+void balle::effetCollision(element *elementPercute)
+{
 
 }
 

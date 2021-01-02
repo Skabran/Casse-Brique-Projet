@@ -8,10 +8,14 @@ d_longueur{longueur}, d_largeur{largeur} {}
 
 brique::~brique() = default;
 
-bool brique::collision(position posElementMouvant){
+bool brique::testDeCollision(position posElementMouvant) {
 
 }
 
+void brique::effetCollision(element *elementPercute)
+{
+
+}
 
 /*
 brique::brique(double coordX, double coordY):d_x{coordX}, d_y{coordY}, d_longueur{longueurBrique}, d_largueur{largeurBrique}, d_color{YELLOW}

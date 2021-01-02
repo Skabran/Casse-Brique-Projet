@@ -10,7 +10,7 @@ void quitter()
 
 bool menuPrincipal(jeu& jeu1) {
     cout << endl << "Menu principal : " << endl << endl;
-	cout << "1\t - Lancer une partie" << endl;
+	cout << "1\t - Lance une partie" << endl;
 	cout << "2\t - Parametres partie" << endl;
     int choix;
 	cout << "0-2 : ";

@@ -7,9 +7,15 @@ d_longueur{longueur}, d_largeur{largeur} {}
 
 raquette::~raquette() = default;
 
-bool raquette::collision(position posElementMouvant){
+bool raquette::testDeCollision(position posElementMouvant) {
 
 }
+
+void raquette::effetCollision(element *elementPercute)
+{
+
+}
+
 
 void raquette::deplacer(){
 

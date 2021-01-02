@@ -18,7 +18,14 @@ public:
 /**
 A FAIRE
 */
-    bool collision(position posElementMouvant) override;
+    bool testDeCollision(position posElementMouvant) override;
+
+/**
+Methode virtuelle
+Applique l'effet d'une collision sur cet element
+    @return d_positionElement - position de l'element
+*/
+    void effetCollision(element *elementPercute) override;
 
 
 private:

@@ -1,5 +1,6 @@
 #ifndef RAQUETTE_H
 #define RAQUETTE_H
+#include "element.h"
 #include "elementMouvant.h"
 
 /**
@@ -33,7 +34,14 @@ s remise au centre
 /**
 A FAIRE
 */
-    bool collision(position posElementMouvant) override final;
+    bool testDeCollision(position posElementMouvant) override final;
+
+
+/**
+Applique l'effet d'une collision sur cet element
+    @return d_positionElement - position de l'element
+*/
+    void effetCollision(element *elementPercute) override final;
 
 private:
 /** Valeur de la longueur de la raquette */

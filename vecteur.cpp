@@ -33,6 +33,13 @@ vecteur vecteur::operator*(double coef){
 }
 
 
+vecteur& vecteur::operator=(const vecteur& vect)
+{
+    d_vitesse=vect.getVitesse();
+    d_angle=vect.getAngle();
+}
+
+
 vecteur operator*(double coef, vecteur& vect){
     vect.multiplieVitesse(coef);
     return vect;

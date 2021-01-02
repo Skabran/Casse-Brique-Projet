@@ -29,22 +29,36 @@ Renvoi la précision souhaité pour le calcul des collisions
     int getPrecisionCollision() const;
 
 
+
+/**
+Renvoi le pointeur d'element de la case i du tableau d'elements
+*/
+    element* getElement(int i) const;
+
+
+/**
+Renvoi le pointeur d'element de la case i du tableau d'elements mouvant
+*/
+    element* getElementMouvant(int i) const;
+
+
+
 /**
 Test si la ou les balles entre en collision avec d'autre element du terrain.
 Elle changent leur vecteur vitesse si c'est le cas.
     @return vrai si il y a collision, faux sinon
 */
-    bool testCollision() const;
+    bool testCollision() ;
 
 
 /**
-Test la collision entre un element i et le reste du terrain avec une précision donnée.
+Test la collision entre un element et le reste du terrain avec une précision donnée.
 Renvoi l'indice de l'element avec lequel il y a collision
-    @param[in] indiceElementMouvant - Indice de l'element que l'on doit tester
+    @param[in] elementMouvant - element que l'on doit tester
     @param[in] precision - precision des test de collision souhaité
     @return indice du premier element en collision. -1 si pas de collision.
 */
-    int collisionTotale(int indiceElementMouvant, int precision) const;
+    int collisionTotale(int indiceElementQuiBouge, int precision) const;
 
 
 /**
@@ -55,7 +69,24 @@ Permet a collisionTotal de ne pas calculer la collision de l'element avec lui mê
     @param[in] positionElementMouvant - position de l'element a tester
     @return indice du premier element en collision. -1 si pas de collision.
 */
-    int collisionPartielle(int indiceDebut, int indiceFin, position positionElementMouvant) const;
+    int collisionPartielle(int indiceDebut, int indiceFin, const element *elementQuiBouge) const;
+
+
+/**
+Test si deux element rentre en collision
+    @param[in] premierElement - Premier element a faire entrer en collision. Si possible l'element mouvant.
+    @param[in] deuxiemeElement - Second element a faire entrer en collision.
+    @return True si il y a collision
+*/
+    bool testCollisionDeuxElement(const element *premierElement,const element *deuxiemeElement) const;
+
+
+/**
+Demande a deux element d'appliquer leurs effets de collision
+    @param[in] premierElement - Premier element a faire entrer en collision. Si possible l'element mouvant.
+    @param[in] deuxiemeElement - Second element a faire entrer en collision.
+*/
+    void effetCollisionDeuxElements(element *premierElement, element *deuxiemeElement);
 
 
 /**

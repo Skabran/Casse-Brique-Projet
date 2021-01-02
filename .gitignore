@@ -35,6 +35,9 @@
 .idea
 cmake-build-debug
 
+#Doxygen
+doxygen/
+
 #GDrive
 desktop.ini
 

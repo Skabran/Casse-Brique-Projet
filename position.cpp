@@ -51,6 +51,12 @@ position position::operator+(const vecteur& vect){
     return *this;
 }
 
+position& position::operator=(const position& pos)
+{
+    d_x=pos.valeurX();
+    d_y=pos.valeurY();
+}
+
 std::ostream& operator<<(std::ostream& ost, const position& pos)
 {
     pos.affiche(ost);

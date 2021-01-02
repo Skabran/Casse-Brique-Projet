@@ -20,7 +20,15 @@ public:
     ~balle();
 
 /** A FAIRE */
-    bool collision(position posElementMouvant) override final;
+    bool testDeCollision(position posElementMouvant) override final;
+
+
+/**
+Methode virtuelle
+Applique l'effet d'une collision sur cet element
+    @return d_positionElement - position de l'element
+*/
+    void effetCollision(element *elementPercute) override final;
 
 /**
 Déplace la balle en additionnant son vecteur vitesse à sa position et en mettant à jour sa position

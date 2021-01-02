@@ -42,11 +42,19 @@ Inverse l'angle du vecteur verticalement
     void inverseVertical();
 
 /**
-Operateur * : multiplie un vecteur par une valeur coef
+Operateur * : multiplie un vecteur par une valeur coef. Multiplie en fait uniquement la vitesse
     @param[in] coef - valeur multiplicative
     @return le vecteur dont la vitesse a été multiplié par le coef
 */
     vecteur operator*(double coef);
+
+
+/**
+Operateur = : remplace les la vitesse et l'angle du premier vecteur par ceux du second
+    @param[in] vect - vecteur a copier
+    @return le vecteur vitesse dont les parametres sont changés
+*/
+    vecteur& operator=(const vecteur& vect);
 
 private :
 /** Valeur de la vitesse du vecteur */
