@@ -1,6 +1,7 @@
 #ifndef AFFICHAGEJEU_H
 #define AFFICHAGEJEU_H
 
+
 /**
 Permet l'affichage du jeu et du terrain
 */
@@ -22,6 +23,11 @@ Affiche un ecran de victoire au joueur
 Affiche un ecran de defaite au joueur
 */
     void afficheDefaite();
+
+/**
+Affiche une balle
+*/
+ void afficheBalle() const;
 
 private:
 
