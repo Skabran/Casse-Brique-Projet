@@ -113,6 +113,12 @@ Ajoute un element mouvant dans le tableau d'element mouvant et dans le tableau d
     void ajouterElementMouvant();
 
 private:
+/** Longueur du terrain */
+    int d_longueurTerrain;
+
+/** Largeur du terrain */
+    int d_largeurTerrain;
+
 /** Nombre de balles dans le jeu */
     int d_nbBalle;
 
