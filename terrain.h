@@ -44,11 +44,10 @@ Renvoi le pointeur d'element de la case i du tableau d'elements mouvant
 
 
 /**
-Test si la ou les balles entre en collision avec d'autre element du terrain.
-Elle changent leur vecteur vitesse si c'est le cas.
+Fait passer un tour au terrain
     @return vrai si il y a collision, faux sinon
 */
-    bool testCollision() ;
+    void boucleDeJeu() ;
 
 
 /**
@@ -91,9 +90,9 @@ Demande a deux element d'appliquer leurs effets de collision
 
 /**
 Test si la partie est finie. C'est a dire plus de brique ou position de la balle sous la position de la raquette
-    @return vrai si la partie est finie, faux sinon
+    @return 0 si la partie n'est pas finie, 1 si il n'y a plus de brique, 2 si le joueur perd
 */
-    bool testPartieFinie() const;
+    int testPartieFinie() const;
 
 
 /**
@@ -125,7 +124,7 @@ private:
 
 /** Tableau comprenant tout les elements mouvant du terrain */
     std::vector<elementMouvant*> d_tableauElementMouvant;
-
+//Ajouter longueur et largeur du terrain
 };
 
 #endif // TERRAIN_H

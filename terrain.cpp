@@ -33,10 +33,10 @@ element* terrain::getElementMouvant(int i) const
 }
 
 
-//  A changer a déplacer dans le jeu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-bool terrain::testCollision()
+
+void terrain::boucleDeJeu()
 {
-    bool collisionStatus = false;
+
     for(int i = 0; i<d_nbBalle;i++)
     {
         int elementCollision = collisionTotale(i, d_precisionCollision);
@@ -45,7 +45,6 @@ bool terrain::testCollision()
             effetCollisionDeuxElements(d_tableauElement[i], d_tableauElement[elementCollision] ); //on applique l'effet de la collision entre la balle et l'element qu'elle rencontre
         }
     }
-    return false;
 }
 
 
@@ -108,4 +107,10 @@ void terrain::effetCollisionDeuxElements(element *premierElement, element *deuxi
 {
     premierElement->effetCollision(deuxiemeElement);
     deuxiemeElement->effetCollision(premierElement);
+}
+
+
+int terrain::testPartieFinie() const
+{
+    return 0;
 }
