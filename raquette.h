@@ -43,6 +43,11 @@ Applique l'effet d'une collision sur cet element
 */
     void effetCollision(element *elementPercute) override final;
 
+/**
+Demande à l'afficheur d'afficher l'element
+*/
+    void afficheElement() const override;
+
 private:
 /** Valeur de la longueur de la raquette */
     double d_longueur;

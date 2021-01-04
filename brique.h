@@ -16,6 +16,18 @@ public:
     ~brique();
 
 /**
+Renvoit la longueur de la brique
+*/
+    double getLongueurBrique() const;
+
+
+/**
+Renvoit la largeur de la brique
+*/
+    double getLargeurBrique() const;
+
+
+/**
 A FAIRE
 */
     bool testDeCollision(position posElementMouvant) override;
@@ -26,6 +38,12 @@ Applique l'effet d'une collision sur cet element
     @return d_positionElement - position de l'element
 */
     void effetCollision(element *elementPercute) override;
+
+
+/**
+Demande à l'afficheur d'afficher l'element
+*/
+    void afficheElement() const override;
 
 
 private:

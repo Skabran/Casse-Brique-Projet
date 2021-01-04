@@ -21,7 +21,10 @@ void raquette::deplacer(){
 
 }
 
+void raquette::afficheElement() const
+{
 
+}
 
 /*
 void raquette::miseAJour()

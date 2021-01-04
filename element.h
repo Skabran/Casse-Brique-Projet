@@ -1,6 +1,7 @@
 #ifndef ELEMENT_H
 #define ELEMENT_H
 #include "position.h"
+#include "affichageJeu.h"
 
 /**
 Classe des element appartenant au jeu
@@ -41,6 +42,13 @@ Applique l'effet d'une collision sur cet element
     @return d_positionElement - position de l'element
 */
     virtual void effetCollision(element *elementPercute)=0;
+
+
+/**
+Methode virtuelle
+Demande à l'afficheur d'afficher l'element
+*/
+    virtual void afficheElement() const =0 ;
 
 
 

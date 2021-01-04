@@ -35,6 +35,12 @@ Déplace la balle en additionnant son vecteur vitesse à sa position et en mettant
 */
     void deplacer() override final;
 
+
+/**
+Demande à l'afficheur d'afficher l'element
+*/
+    void afficheElement() const override ;
+
 private:
 /**Taille du rayon de la balle*/
     double d_rayon;

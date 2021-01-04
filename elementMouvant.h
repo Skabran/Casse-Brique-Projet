@@ -3,6 +3,7 @@
 #include "element.h"
 #include "vecteur.h"
 #include "position.h"
+#include "affichageJeu.h"
 
 /**
 Classe des element mobile. Elle hérite des elements standards
@@ -52,6 +53,13 @@ Applique l'effet d'une collision sur cet element
     @return d_positionElement - position de l'element
 */
     virtual void effetCollision(element *elementPercute) override=0;
+
+
+/**
+Methode virtuelle
+Demande à l'afficheur d'afficher l'element
+*/
+    virtual void afficheElement() const override  =0;
 
 private:
 /** vecteur vitesse de l'element mouvant */

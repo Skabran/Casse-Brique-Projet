@@ -21,3 +21,8 @@ void balle::effetCollision(element *elementPercute)
 void balle::deplacer(){
 
 }
+
+void balle::afficheElement() const
+{
+
+}
