@@ -24,6 +24,12 @@ Affiche un ecran de defaite au joueur
     void afficheDefaite();
 
 private:
+
+    /** longueur de l'affichage */
+    int d_longueurAffichage;
+
+    /** largeur affichage */
+    int d_largeurAffichage;
 };
 
 #endif // AFFICHAGEJEU_H
