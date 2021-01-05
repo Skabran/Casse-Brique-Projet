@@ -1,6 +1,5 @@
 #include "jeu.h"
-#include "terrain.h"
-#include "affichageJeu.h"
+
 
 jeu::jeu() : d_terrainDeJeu{}, d_affichage{} {}
 

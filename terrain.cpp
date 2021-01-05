@@ -1,8 +1,5 @@
 #include "terrain.h"
-#include "element.h"
-#include "elementMouvant.h"
-#include "balle.h"
-#include <vector>
+
 
 terrain::terrain():d_longueurTerrain{100}, d_largeurTerrain{100}, d_nbBalle{0}, d_precisionCollision{1},
  d_tableauElement{}, d_tableauElementMouvant{} {}

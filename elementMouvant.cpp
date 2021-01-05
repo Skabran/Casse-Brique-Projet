@@ -1,6 +1,5 @@
 #include "elementMouvant.h"
-#include "position.h"
-#include "vecteur.h"
+
 
 elementMouvant::elementMouvant(): element{}, d_vecteurVitesse{} {}
 

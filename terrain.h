@@ -3,6 +3,7 @@
 #include <vector>
 #include "element.h"
 #include "elementMouvant.h"
+#include "balle.h"
 #include "position.h"
 /**
 Classe représentant le terrain de jeu
