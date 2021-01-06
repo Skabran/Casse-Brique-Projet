@@ -2,6 +2,9 @@
 
 enveloppe::enveloppe() : d_pointHG{0,0}, d_pointHD{0,0}, d_pointBG{0,0}, d_pointBD{0,0} {}
 
+enveloppe::enveloppe(const position& coinHG, const position& coinHD, const position& coinBG, const position& coinBD) :
+    d_pointHG{coinHG}, d_pointHD{coinHD}, d_pointBG{coinBG}, d_pointBD{coinBD} {}
+
 enveloppe::~enveloppe() {}
 
 

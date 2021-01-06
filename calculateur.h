@@ -2,6 +2,8 @@
 #define CALCULATEUR_H
 #include "enveloppe.h"
 #include "brique.h"
+#include "balle.h"
+#include "raquette.h"
 
 /**
 Classe permettant de faire les calcul séparement des element et des collisions
@@ -54,6 +56,20 @@ Calcul l'enveloppe d'une brique et la renvoie
     @return l'enveloppe de la brique
 */
     enveloppe calculEnveloppe(const brique& brique1);
+
+
+/**
+Calcul l'enveloppe d'une balle et la renvoie
+    @return l'enveloppe de la balle
+*/
+    enveloppe calculEnveloppe(const balle& balle1);
+
+
+/**
+Calcul l'enveloppe d'une raquette et la renvoie
+    @return l'enveloppe de la raquette
+*/
+    enveloppe calculEnveloppe(const raquette& raquette1);
 
 
 private:

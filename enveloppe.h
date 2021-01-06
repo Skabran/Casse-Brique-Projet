@@ -9,6 +9,8 @@ class enveloppe{
 public:
 ///Constructeur de base de l'enveloppe
     enveloppe();
+///Constructeur d'une enveloppe via 4 positions
+    enveloppe(const position& coinHG, const position& coinHD, const position& coinBG, const position& coinBD);
 ///Destructeur de base de l'enveloppe
     ~enveloppe();
 
