@@ -2,6 +2,7 @@
 #define JEU_H
 #include "terrain.h"
 #include "affichageJeu.h"
+#include "calculateur.h"
 
 /**
 Classe du jeu
@@ -53,6 +54,8 @@ private :
     terrain d_terrainDeJeu;
 /** Affichage du jeu */
     affichageJeu d_affichage;
+/** Calculateur du jeu */
+    calculateur d_calculBot;
 
 };
 

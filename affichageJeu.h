@@ -5,7 +5,7 @@
 #include "brique.h"
 
 /**
-Permet l'affichage du jeu et du terrain
+Classe permettant l'affichage du jeu et du terrain
 */
 class affichageJeu{
 public:
