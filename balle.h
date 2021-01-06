@@ -9,14 +9,14 @@ Classe représentant la balle. Elle herite d'un elementMouvant
 */
 class balle : public elementMouvant{
 public:
-///Constructeur par default balle (0,0) de rayon 1
+///Constructeur par default balle (0,0) de diametre 2
     balle();
 
-///Constructeur de balle de position (x,y) et de rayon "rayon"
-    balle(double x, double y, double rayon);
+///Constructeur de balle de position (x,y) et de diametre "diametre"
+    balle(double x, double y, double diametre);
 
-///Constructeur de balle de position (x,y)  de rayon "rayon". Construit aussi son vecteur (vitesse, angle)
-    balle(double x, double y, double vitesse, double angle, double rayon);
+///Constructeur de balle de position (x,y)  de diametre "diametre". Construit aussi son vecteur (vitesse, angle)
+    balle(double x, double y, double vitesse, double angle, double diametre);
 
 ///Destructeur par default de balle
     ~balle();
@@ -26,9 +26,9 @@ public:
 
 
 /**
-Renvoi le rayon de la balle
+Renvoi le diametre de la balle
 */
-    double getRayon() const;
+    double getDiametre() const;
 
 
 
@@ -51,8 +51,8 @@ Demande à l'afficheur d'afficher l'element
     void afficheElement(const affichageJeu& affichage) const override ;
 
 private:
-/**Taille du rayon de la balle*/
-    double d_rayon;
+/**Taille du diametre de la balle*/
+    double d_diametre;
 };
 
 #endif // BALLE_H

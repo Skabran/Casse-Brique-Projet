@@ -38,10 +38,14 @@
 		<Unit filename="balle.h" />
 		<Unit filename="brique.cpp" />
 		<Unit filename="brique.h" />
+		<Unit filename="calculateur.cpp" />
+		<Unit filename="calculateur.h" />
 		<Unit filename="element.cpp" />
 		<Unit filename="element.h" />
 		<Unit filename="elementMouvant.cpp" />
 		<Unit filename="elementMouvant.h" />
+		<Unit filename="enveloppe.cpp" />
+		<Unit filename="enveloppe.h" />
 		<Unit filename="graphics.h" />
 		<Unit filename="jeu.cpp" />
 		<Unit filename="jeu.h" />

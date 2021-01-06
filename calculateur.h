@@ -1,6 +1,7 @@
 #ifndef CALCULATEUR_H
 #define CALCULATEUR_H
-#include "position.h"
+#include "enveloppe.h"
+#include "brique.h"
 
 /**
 Classe permettant de faire les calcul séparement des element et des collisions
@@ -12,14 +13,47 @@ public:
 ///Destructeur par default du calculateur
     ~calculateur();
 
+/**
+Renvoie la position du coin en haut à gauche de l'enveloppe
+    @param[in] positionCentre - position du centre de l'element
+    @param[in] longueur - longueur de l'element
+    @param[in] largeur - largeur de l'element
+*/
+    position calculPointHG(const position& positionCentre, const double longueur, const double largeur);
+
 
 /**
-Calcul la position du coin en haut a gauche du rectangle a partir de sa position centrale
-Si on donne une forme autre qu'un rectangle, il calcul le rectangle englobbant
-    @param[in] pointCentral - Point central du rectangle
-    @return la position du point en haut a gauche du rectangle
+Renvoie la position du coin en haut a droite de l'enveloppe
+    @param[in] positionCentre - position du centre de l'element
+    @param[in] longueur - longueur de l'element
+    @param[in] largeur - largeur de l'element
 */
-    position pointHG(const position& pointCentral) const;
+    position calculPointHD(const position& pos, const double longueur, const double largeur);
+
+
+/**
+Renvoie la position du coin en bas a gauche de l'enveloppe
+    @param[in] positionCentre - position du centre de l'element
+    @param[in] longueur - longueur de l'element
+    @param[in] largeur - largeur de l'element
+*/
+    position calculPointBG(const position& pos, const double longueur, const double largeur);
+
+
+/**
+Renvoie la position du coin en bas a droite de l'enveloppe
+    @param[in] positionCentre - position du centre de l'element
+    @param[in] longueur - longueur de l'element
+    @param[in] largeur - largeur de l'element
+*/
+    position calculPointBD(const position& pos, const double longueur, const double largeur);
+
+
+/**
+Calcul l'enveloppe d'une brique et la renvoie
+    @return l'enveloppe de la brique
+*/
+    enveloppe calculEnveloppe(const brique& brique1);
 
 
 private:

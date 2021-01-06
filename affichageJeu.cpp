@@ -17,7 +17,7 @@ void affichageJeu::afficheDefaite() const
 
 void affichageJeu::afficheBalle(const balle& balleAAfficher) const
 {
-    circle(balleAAfficher.getPosition().valeurX(), balleAAfficher.getPosition().valeurY(), balleAAfficher.getRayon());
+    circle(balleAAfficher.getPosition().valeurX(), balleAAfficher.getPosition().valeurY(), (balleAAfficher.getDiametre())/2);
 }
 
 void affichageJeu::afficheBrique(const brique& briqueAAfficher) const

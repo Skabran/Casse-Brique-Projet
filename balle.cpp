@@ -2,18 +2,18 @@
 #include "affichageJeu.h"
 
 
-balle::balle(): elementMouvant{}, d_rayon{1.0} {}
+balle::balle(): elementMouvant{}, d_diametre{2.0} {}
 
-balle::balle(double x, double y, double rayon): elementMouvant{x, y}, d_rayon{rayon} {}
+balle::balle(double x, double y, double diametre): elementMouvant{x, y}, d_diametre{diametre} {}
 
-balle::balle(double x, double y, double vitesse, double angle, double rayon): elementMouvant{x, y, vitesse, angle},
-d_rayon{rayon} {}
+balle::balle(double x, double y, double vitesse, double angle, double diametre): elementMouvant{x, y, vitesse, angle},
+d_diametre{diametre} {}
 
 balle::~balle() = default;
 
-double balle::getRayon() const
+double balle::getDiametre() const
 {
-    return d_rayon;
+    return d_diametre;
 }
 
 
