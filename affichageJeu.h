@@ -1,6 +1,8 @@
 #ifndef AFFICHAGEJEU_H
 #define AFFICHAGEJEU_H
-
+#include "graphics.h"
+#include "balle.h"
+#include "brique.h"
 
 /**
 Permet l'affichage du jeu et du terrain
@@ -16,18 +18,26 @@ public:
 /**
 Affiche un ecran de victoire au joueur
 */
-    void afficheVictoire();
+    void afficheVictoire() const;
 
 
 /**
 Affiche un ecran de defaite au joueur
 */
-    void afficheDefaite();
+    void afficheDefaite() const;
 
 /**
 Affiche une balle
+    @param[in] balleAAfficher - La balle que l'on désire tracer
 */
- void afficheBalle() const;
+    void afficheBalle(const balle& balleAAfficher) const;
+
+
+/**
+Affiche une brique
+    @param[in] briqueAAfficher - La brique que l'on désire tracer
+*/
+    void afficheBrique(const brique& briqueAAfficher) const;
 
 private:
 

@@ -1,7 +1,8 @@
 #ifndef RAQUETTE_H
 #define RAQUETTE_H
-#include "element.h"
 #include "elementMouvant.h"
+
+class affichageJeu;
 
 /**
 Classe représentant la raquette : herite d'un elemant mouvant
@@ -46,7 +47,7 @@ Applique l'effet d'une collision sur cet element
 /**
 Demande à l'afficheur d'afficher l'element
 */
-    void afficheElement() const override;
+    void afficheElement(const affichageJeu& affichage) const override;
 
 private:
 /** Valeur de la longueur de la raquette */

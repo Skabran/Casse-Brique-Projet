@@ -1,4 +1,6 @@
 #include "balle.h"
+#include "affichageJeu.h"
+
 
 balle::balle(): elementMouvant{}, d_rayon{1.0} {}
 
@@ -8,6 +10,12 @@ balle::balle(double x, double y, double vitesse, double angle, double rayon): el
 d_rayon{rayon} {}
 
 balle::~balle() = default;
+
+double balle::getRayon() const
+{
+    return d_rayon;
+}
+
 
 bool balle::testDeCollision(position posElementMouvant) {
 
@@ -22,7 +30,7 @@ void balle::deplacer(){
 
 }
 
-void balle::afficheElement() const
+void balle::afficheElement(const affichageJeu& affichage) const
 {
-
+    affichage.afficheBalle(*this);
 }

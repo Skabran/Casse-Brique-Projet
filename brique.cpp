@@ -31,7 +31,7 @@ void brique::effetCollision(element *elementPercute)
 }
 
 
-void brique::afficheElement() const
+void brique::afficheElement(const affichageJeu& affichage) const
 {
 
 }

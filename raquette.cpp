@@ -21,7 +21,7 @@ void raquette::deplacer(){
 
 }
 
-void raquette::afficheElement() const
+void raquette::afficheElement(const affichageJeu& affichage) const
 {
 
 }

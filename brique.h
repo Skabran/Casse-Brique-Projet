@@ -1,7 +1,8 @@
 #ifndef BRIQUE_H
 #define BRIQUE_H
 #include "element.h"
-#include "position.h"
+
+class affichageJeu;
 
 /**
 Classe de la brique de base du jeu. Herite de la classe element
@@ -43,7 +44,7 @@ Applique l'effet d'une collision sur cet element
 /**
 Demande à l'afficheur d'afficher l'element
 */
-    void afficheElement() const override;
+    void afficheElement(const affichageJeu& affichage) const override;
 
 
 private:

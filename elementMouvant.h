@@ -2,8 +2,8 @@
 #define ELEMENTMOUVANT_H
 #include "element.h"
 #include "vecteur.h"
-#include "position.h"
-#include "affichageJeu.h"
+
+class affichageJeu;
 
 /**
 Classe des element mobile. Elle hérite des elements standards
@@ -59,7 +59,7 @@ Applique l'effet d'une collision sur cet element
 Methode virtuelle
 Demande à l'afficheur d'afficher l'element
 */
-    virtual void afficheElement() const override  =0;
+    virtual void afficheElement(const affichageJeu& affichage) const override  =0;
 
 private:
 /** vecteur vitesse de l'element mouvant */

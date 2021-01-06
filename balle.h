@@ -2,6 +2,8 @@
 #define BALLE_H
 #include "elementMouvant.h"
 
+class affichageJeu;
+
 /**
 Classe représentant la balle. Elle herite d'un elementMouvant
 */
@@ -24,6 +26,13 @@ public:
 
 
 /**
+Renvoi le rayon de la balle
+*/
+    double getRayon() const;
+
+
+
+/**
 Methode virtuelle
 Applique l'effet d'une collision sur cet element
     @return d_positionElement - position de l'element
@@ -39,7 +48,7 @@ Déplace la balle en additionnant son vecteur vitesse à sa position et en mettant
 /**
 Demande à l'afficheur d'afficher l'element
 */
-    void afficheElement() const override ;
+    void afficheElement(const affichageJeu& affichage) const override ;
 
 private:
 /**Taille du rayon de la balle*/

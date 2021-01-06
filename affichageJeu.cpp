@@ -4,14 +4,23 @@ affichageJeu::affichageJeu(): d_longueurAffichage{} ,d_largeurAffichage {} {}
 
 affichageJeu::~affichageJeu() {}
 
-void affichageJeu::afficheVictoire()
+void affichageJeu::afficheVictoire() const
 {
 
 }
 
-void affichageJeu::afficheDefaite()
+void affichageJeu::afficheDefaite() const
 {
 
 }
 
 
+void affichageJeu::afficheBalle(const balle& balleAAfficher) const
+{
+    circle(balleAAfficher.getPosition().valeurX(), balleAAfficher.getPosition().valeurY(), balleAAfficher.getRayon());
+}
+
+void affichageJeu::afficheBrique(const brique& briqueAAfficher) const
+{
+
+}
