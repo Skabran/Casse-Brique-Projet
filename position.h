@@ -13,6 +13,8 @@ public:
     position();
 ///Constructeur a deux valeurs position (x,y)
     position(double x, double y);
+///Constructeur par recopie
+    position(const position& pos);
 ///Destructeur par default
     ~position();
 /**

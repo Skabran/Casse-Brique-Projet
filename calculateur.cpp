@@ -53,5 +53,15 @@ position calculateur::calculPointBD(const position& positionCentre, const double
 
 enveloppe calculateur::calculEnveloppe(const brique& brique1)
 {
+    double longueurBrique = brique1.getLongueurBrique();
+    double largeurBrique = brique1.getLargeurBrique();
+    position centreBrique{brique1.getPosition()};
 
+    position coinHG = calculPointHG(centreBrique, longueurBrique , largeurBrique );
+    position coinHD = calculPointHD(centreBrique, longueurBrique , largeurBrique );
+    position coinBG = calculPointBG(centreBrique, longueurBrique , largeurBrique );
+    position coinBD = calculPointBD(centreBrique, longueurBrique , largeurBrique );
+
+    enveloppe env{coinHG, coinHD, coinBG, coinBD};
+    return env;
 }
