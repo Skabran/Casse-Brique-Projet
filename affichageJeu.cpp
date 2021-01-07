@@ -63,7 +63,7 @@ void affichageJeu::afficheTerrain(const terrain& terrainAAfficher) const
 {
     double longueur = terrainAAfficher.getLongueurTerrain();
     double largeur = terrainAAfficher.getLargeurTerrain();
-    opengraphsize(longueur,largeur);
+    opengraphsize(longueur+10,largeur); //+10 car la fenetre s'ouvre un petit peut trop a gauche pour une raison que j'ignore
     setcolor(RED);
     line(0,0,longueur,0);
     line(0,0,0,largeur);

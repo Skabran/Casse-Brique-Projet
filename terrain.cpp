@@ -1,7 +1,7 @@
 #include "terrain.h"
 
 
-terrain::terrain():d_longueurTerrain{800}, d_largeurTerrain{800}, d_nbBalle{0}, d_precisionCollision{1},
+terrain::terrain():d_longueurTerrain{780}, d_largeurTerrain{800}, d_nbBalle{0}, d_precisionCollision{1},
  d_tableauElement{}, d_tableauElementMouvant{} {}
 
 terrain::terrain(const std::string& nomFichier) : d_longueurTerrain{}, d_largeurTerrain{},
@@ -197,6 +197,8 @@ int terrain::litTerrain(const std::string& nomFichier)
             d_tableauElement.push_back(nullptr);
             d_tableauElement[i]=new brique{x,y};
             i++;
+            break;
+        default:
             break;
         }
     }

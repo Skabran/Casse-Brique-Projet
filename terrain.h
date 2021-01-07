@@ -13,7 +13,7 @@ Classe représentant le terrain de jeu
 class terrain{
 public:
 
-///Constructeur par default, créé un terrain avec deux tableaux vides.
+///Constructeur par default, créé un terrain avec deux tableaux vides et de longueur 780 pour largeur 800
     terrain();
 ///Construit un terrain a partir d'un fichier
     terrain(const std::string& nomFichier);
