@@ -1,6 +1,6 @@
 #include "affichageJeu.h"
 
-affichageJeu::affichageJeu(): d_longueurAffichage{} ,d_largeurAffichage {} {}
+affichageJeu::affichageJeu() {}
 
 affichageJeu::~affichageJeu() {}
 

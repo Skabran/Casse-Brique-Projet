@@ -12,14 +12,14 @@ public:
 
 /**
 Constructeur de base de la raquette. Créer un element mouvant par default
-et une raquette de longueur 4 et de largeur 2
+et une raquette de longueur 40 et de largeur 20
 */
     raquette();
 
 /**
 Constructeur de la raquette. Créer un element mouvant de position (x,y) de longueur longueur et de largeur largeur
 */
-    raquette(double x, double y, double longueur, double largeur);
+    raquette(double x, double y, double longueur=40, double largeur=20);
 
 ///Destructeur par default de la raquette
     ~raquette();

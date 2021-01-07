@@ -63,12 +63,6 @@ Affiche le terrain de Jeu
     void afficheTerrain(const terrain& terrainAAfficher) const;
 
 private:
-
-    /** longueur de l'affichage */
-    int d_longueurAffichage;
-
-    /** largeur affichage */
-    int d_largeurAffichage;
 };
 
 #endif // AFFICHAGEJEU_H

@@ -34,7 +34,7 @@ Affiche le menu principal et permet a l'utilisateur de choisir quoi faire
 /**
 Initialise le terrain du jeu a partir d'un fichier et l'ajoute a la liste des terrains
     @param[in] nomFichier - Nom du fichier a lire
-    return 1 si le fichier c'est lu correctement, 0 sinon.
+    return 0 si le fichier c'est lu correctement, 1 si le fichier ne s'est pas lu, 2 si le format du fichier est mauvais
 */
     int litTerrain(const std::string& nomFichier); //lit un terrain dans un fichier texte
 

@@ -1,7 +1,7 @@
 #include "raquette.h"
 #include "affichageJeu.h"
 
-raquette::raquette(): elementMouvant{}, d_longueur{4.0}, d_largeur{2.0} {}
+raquette::raquette(): elementMouvant{}, d_longueur{40.0}, d_largeur{20.0} {}
 
 raquette::raquette(double x, double y, double longueur, double largeur): elementMouvant{x, y},
 d_longueur{longueur}, d_largeur{largeur} {}

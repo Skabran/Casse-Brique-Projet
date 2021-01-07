@@ -4,6 +4,9 @@
 #include <fstream>
 #include <vector>
 #include "balle.h"
+#include "brique.h"
+#include "raquette.h"
+
 /**
 Classe représentant le terrain de jeu
 */
@@ -133,17 +136,23 @@ Ajoute un element mouvant dans le tableau d'element mouvant et dans le tableau d
 
 
 /**
-Modifie un terrain a partir d'un fichier
+Modifie un terrain a partir d'un fichier.
+Le format du fichier est le suivant :
+nombre de balles
+precision de calcul
+un nombre de balle correspondant au nombre de balle donné précédement tel que :
+    A x y v ° d - balle{x,y,v,°,d}
+différents elements avec : B x y - raquette{x,y} et C x y - brique{x,y}
     @param[in] nomFichier - Nom du fichier a partir duquel on construit le terrain
-    @return 1 si le fichier c'est lu correctement, 0 sinon
+    @return 0 si le fichier c'est lu correctement, 1 si le fichier ne s'est pas lu, 2 si le format du fichier est mauvais
 */
     int litTerrain(const std::string& nomFichier);
 
 private:
-/** Longueur du terrain */
+/** Longueur du terrain. Par default 800. Possibilité de changer plus tard */
     int d_longueurTerrain;
 
-/** Largeur du terrain */
+/** Largeur du terrain. Par default 800. Possibilité de changer plus tard */
     int d_largeurTerrain;
 
 /** Nombre de balles dans le jeu */

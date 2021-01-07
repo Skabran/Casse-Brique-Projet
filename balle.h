@@ -9,14 +9,14 @@ Classe représentant la balle. Elle herite d'un elementMouvant
 */
 class balle : public elementMouvant{
 public:
-///Constructeur par default balle (0,0) de diametre 2
+///Constructeur par default balle (0,0) de diametre 10
     balle();
 
 ///Constructeur de balle de position (x,y) et de diametre "diametre"
-    balle(double x, double y, double diametre);
+    balle(double x, double y, double diametre=10);
 
 ///Constructeur de balle de position (x,y)  de diametre "diametre". Construit aussi son vecteur (vitesse, angle)
-    balle(double x, double y, double vitesse, double angle, double diametre);
+    balle(double x, double y, double vitesse, double angle, double diametre=10);
 
 ///Destructeur par default de balle
     ~balle();

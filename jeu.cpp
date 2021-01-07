@@ -3,7 +3,7 @@
 
 jeu::jeu() : d_terrainDeJeu{}, d_affichage{}, d_listeTerrain{}
 {
-
+    std::cout<<litTerrain("terrainParDefault");
 }
 
 jeu::~jeu() = default;
@@ -13,6 +13,7 @@ void jeu::menuPrincipal()
 {
     int choix;
 
+    std::cout << std::endl << std::endl << std::endl;
     std::cout << std::endl << "\t\t== Menu Principal == " << std::endl << std::endl;
 	std::cout << "1\t - Lancer une partie" << std::endl;
 	std::cout << "2\t - Changer les parametres partie" << std::endl;
@@ -29,8 +30,10 @@ void jeu::menuPrincipal()
             break;
         case 3:
             choixTerrain();
+            break;
         case 0:
             quitterJeu();
+            break;
         default:
 	        std::cout << "Entrez un nombre entre 0 et 3" << std::endl;
     }
