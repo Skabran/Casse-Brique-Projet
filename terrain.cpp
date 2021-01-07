@@ -1,4 +1,5 @@
 #include "terrain.h"
+#include "affichageJeu.h"
 
 
 terrain::terrain():d_longueurTerrain{780}, d_largeurTerrain{800}, d_nbBalle{0}, d_precisionCollision{1},
@@ -77,11 +78,17 @@ void terrain::boucleDeJeu()
     for(int i = 0; i<d_nbBalle;i++)
     {
         int elementCollision = collisionTotale(i, d_precisionCollision);
-        if(elementCollision!=-1)    //Si il n'y a pas eu de collision, on ne fais rien
+        if(elementCollision==-1)
+        {
+            deplacerElementMouvant(i);  //Pas de collision, la balle se déplace de tout son vecteur
+        }
+        else
         {
             effetCollisionDeuxElements(d_tableauElement[i], d_tableauElement[elementCollision] ); //on applique l'effet de la collision entre la balle et l'element qu'elle rencontre
-        }
+        }//a faire
     }
+    //deplacer afficheur dans terrrain
+    getch();
 }
 
 
@@ -150,6 +157,12 @@ void terrain::effetCollisionDeuxElements(element *premierElement, element *deuxi
 int terrain::testPartieFinie() const
 {
     return 0;
+}
+
+
+void terrain::deplacerElementMouvant(unsigned int i)
+{
+    d_tableauElementMouvant[i]->deplacer();
 }
 
 

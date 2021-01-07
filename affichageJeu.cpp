@@ -6,12 +6,14 @@ affichageJeu::~affichageJeu() {}
 
 void affichageJeu::afficheVictoire() const
 {
-
+    getch();
+    closegraph();
 }
 
 void affichageJeu::afficheDefaite() const
 {
-
+    getch();
+    closegraph();
 }
 
 
@@ -31,7 +33,7 @@ void affichageJeu::afficheBalle(const balle& balleAAfficher) const
     setcolor(RED);
     double x=balleAAfficher.getPosition().valeurX();
     double y=balleAAfficher.getPosition().valeurY();
-    setfillstyle(HATCH_FILL, RED);
+    setfillstyle(SOLID_FILL, RED);
     circle(x, y, (balleAAfficher.getDiametre())/2);
     floodfill(x,y,RED);
 }
@@ -63,7 +65,6 @@ void affichageJeu::afficheTerrain(const terrain& terrainAAfficher) const
 {
     double longueur = terrainAAfficher.getLongueurTerrain();
     double largeur = terrainAAfficher.getLargeurTerrain();
-    opengraphsize(longueur+10,largeur); //+10 car la fenetre s'ouvre un petit peut trop a gauche pour une raison que j'ignore
     setcolor(RED);
     line(0,0,longueur,0);
     line(0,0,0,largeur);
@@ -73,6 +74,4 @@ void affichageJeu::afficheTerrain(const terrain& terrainAAfficher) const
     {
         elements[i]->afficheElement(*this);
     }
-    getch();
-    closegraph();
 }

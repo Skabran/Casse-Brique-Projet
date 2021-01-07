@@ -17,7 +17,7 @@ public:
     terrain();
 ///Construit un terrain a partir d'un fichier
     terrain(const std::string& nomFichier);
-///Destructeur par default du terrain
+///Destructeur du terrain
     ~terrain();
 
 
@@ -132,9 +132,10 @@ Test si la partie est finie. C'est a dire plus de brique ou position de la balle
 
 
 /**
-Deplace tout les element mouvant du terrain en appelant la fonction deplacer de chaque element mouvant
+Deplace l'element i du tableau d'elementMouvant
+    @param[in] i - index de l'element a déplacer
 */
-    void deplacerElementMouvant();
+    void deplacerElementMouvant(unsigned int i);
 
 
 /**
