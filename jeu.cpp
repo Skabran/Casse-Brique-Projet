@@ -1,7 +1,10 @@
 #include "jeu.h"
 
 
-jeu::jeu() : d_terrainDeJeu{}, d_affichage{} {}
+jeu::jeu() : d_terrainDeJeu{}, d_affichage{}, d_listeTerrain{}
+{
+
+}
 
 jeu::~jeu() = default;
 
@@ -80,4 +83,15 @@ void jeu::afficherLeTerrain() const
 void jeu::choixTerrain()
 {
 
+}
+
+int jeu::litTerrain(const std::string& nomFichier)
+{
+    d_listeTerrain.push_back(nomFichier);
+    return d_terrainDeJeu.litTerrain(nomFichier);
+}
+
+std::vector<std::string> jeu::getListeTerrain() const
+{
+    return d_listeTerrain;
 }

@@ -11,7 +11,6 @@ class jeu{
 public:
 ///Constructeur par default du jeu. Initialise un terrain de jeu par default
     jeu();
-
 ///Destructeur par default du jeu
     ~jeu();
 
@@ -33,9 +32,11 @@ Affiche le menu principal et permet a l'utilisateur de choisir quoi faire
     void menuPrincipal();
 
 /**
-Initialise un terrain a partir d'un fichier
+Initialise le terrain du jeu a partir d'un fichier et l'ajoute a la liste des terrains
+    @param[in] nomFichier - Nom du fichier a lire
+    return 1 si le fichier c'est lu correctement, 0 sinon.
 */
-    void litTerrain(); //lit un terrain dans un fichier texte
+    int litTerrain(const std::string& nomFichier); //lit un terrain dans un fichier texte
 
 
 /**
@@ -52,10 +53,9 @@ Quitte le jeu
 
 /**
 Renvoie le terrain de jeu
-    @return d_terrain - Le terrain de jeu
+    @return Le terrain de jeu
 */
     terrain getTerrain() const;
-
 
 
 /**
@@ -63,14 +63,21 @@ Demande à l'afficheur d'afficher le terrain
 */
     void afficherLeTerrain() const;
 
+
+/**
+Renvoie la liste des noms de fichiers de terrains de jeu
+    @return La liste des terrains de jeu
+*/
+    std::vector<std::string> getListeTerrain() const;
+
+
 private :
 /** terrain sur lequel le jeu se passe */
     terrain d_terrainDeJeu;
 /** Affichage du jeu */
     affichageJeu d_affichage;
-/** Calculateur du jeu */
-    calculateur d_calculBot;
-
+/** Liste des terrains disponible. d_listeTerrain[0] est le terrain par default */
+    std::vector<std::string> d_listeTerrain;
 };
 
 #endif // JEU_H

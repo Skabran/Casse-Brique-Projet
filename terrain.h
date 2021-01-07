@@ -1,5 +1,7 @@
 #ifndef TERRAIN_H
 #define TERRAIN_H
+#include <iostream>
+#include <fstream>
 #include <vector>
 #include "balle.h"
 /**
@@ -10,7 +12,8 @@ public:
 
 ///Constructeur par default, créé un terrain avec deux tableaux vides.
     terrain();
-
+///Construit un terrain a partir d'un fichier
+    terrain(const std::string& nomFichier);
 ///Destructeur par default du terrain
     ~terrain();
 
@@ -127,6 +130,14 @@ Ajoute un element au tableau d'element du terrain
 Ajoute un element mouvant dans le tableau d'element mouvant et dans le tableau d'element du terrain
 */
     void ajouterElementMouvant();
+
+
+/**
+Modifie un terrain a partir d'un fichier
+    @param[in] nomFichier - Nom du fichier a partir duquel on construit le terrain
+    @return 1 si le fichier c'est lu correctement, 0 sinon
+*/
+    int litTerrain(const std::string& nomFichier);
 
 private:
 /** Longueur du terrain */

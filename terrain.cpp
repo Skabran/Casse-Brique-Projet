@@ -4,6 +4,12 @@
 terrain::terrain():d_longueurTerrain{100}, d_largeurTerrain{100}, d_nbBalle{0}, d_precisionCollision{1},
  d_tableauElement{}, d_tableauElementMouvant{} {}
 
+terrain::terrain(const std::string& nomFichier) : d_longueurTerrain{}, d_largeurTerrain{},
+d_nbBalle{}, d_precisionCollision{}, d_tableauElement{}, d_tableauElementMouvant{}
+{
+
+}
+
 terrain::~terrain() = default;
 
 
@@ -120,4 +126,10 @@ void terrain::effetCollisionDeuxElements(element *premierElement, element *deuxi
 int terrain::testPartieFinie() const
 {
     return 0;
+}
+
+
+int terrain::litTerrain(const std::string& nomFichier)
+{
+
 }
