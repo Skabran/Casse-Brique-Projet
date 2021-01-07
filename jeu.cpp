@@ -10,7 +10,7 @@ void jeu::menuPrincipal()
 {
     int choix;
 
-    std::cout << std::endl << "Menu Principal : " << std::endl << std::endl;
+    std::cout << std::endl << "\t\t== Menu Principal == " << std::endl << std::endl;
 	std::cout << "1\t - Lancer une partie" << std::endl;
 	std::cout << "2\t - Changer les parametres partie" << std::endl;
 	std::cout << "3\t - Choisir un terrain" << std::endl;
@@ -38,7 +38,6 @@ void jeu::lancerPartie()
     int resultatPartie=0;
     while(resultatPartie==0)
     {
-
         d_terrainDeJeu.boucleDeJeu();
         resultatPartie=d_terrainDeJeu.testPartieFinie();
     }
@@ -64,6 +63,18 @@ void jeu::choixParametre()
 void jeu::quitterJeu()
 {
 
+}
+
+
+terrain jeu::getTerrain() const
+{
+    return d_terrainDeJeu;
+}
+
+
+void jeu::afficherLeTerrain() const
+{
+    d_affichage.afficheTerrain(getTerrain());
 }
 
 void jeu::choixTerrain()

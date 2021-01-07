@@ -24,12 +24,22 @@ element* terrain::getElement(int i) const
     return d_tableauElement[i];
 }
 
-element* terrain::getElementMouvant(int i) const
+elementMouvant* terrain::getElementMouvant(int i) const
 {
     return d_tableauElementMouvant[i];
 }
 
 
+std::vector<element*> terrain::getElement() const
+{
+    return d_tableauElement;
+}
+
+
+std::vector<elementMouvant*> terrain::getElementmouvant() const
+{
+    return d_tableauElementMouvant;
+}
 
 void terrain::boucleDeJeu()
 {

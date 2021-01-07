@@ -1,7 +1,7 @@
 #ifndef AFFICHAGEJEU_H
 #define AFFICHAGEJEU_H
 #include "graphics.h"
-#include "balle.h"
+#include "terrain.h"
 #include "brique.h"
 #include "enveloppe.h"
 #include "calculateur.h"
@@ -54,6 +54,13 @@ Affiche une raquette
     @param[in] raquetteAAfficher - La raquette que l'on désire tracer
 */
     void afficheRaquette(const raquette& raquetteAAfficher) const;
+
+
+/**
+Affiche le terrain de Jeu
+    @param[in] terrainAAfficher - Le terrain que l'on désire afficher
+*/
+    void afficheTerrain(const terrain& terrainAAfficher) const;
 
 private:
 

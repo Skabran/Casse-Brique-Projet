@@ -46,3 +46,13 @@ void affichageJeu::afficheRaquette(const raquette& raquetteAAfficher) const
     env = calc.calculEnveloppe(raquetteAAfficher);
     afficheEnveloppe(env);
 }
+
+
+void affichageJeu::afficheTerrain(const terrain& terrainAAfficher) const
+{
+    std::vector<element*> elements = terrainAAfficher.getElement();
+    for(unsigned int i=0; i<elements.size(); i++)
+    {
+        elements[i]->afficheElement(*this);
+    }
+}

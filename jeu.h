@@ -49,6 +49,20 @@ Quitte le jeu
 */
     void quitterJeu();
 
+
+/**
+Renvoie le terrain de jeu
+    @return d_terrain - Le terrain de jeu
+*/
+    terrain getTerrain() const;
+
+
+
+/**
+Demande à l'afficheur d'afficher le terrain
+*/
+    void afficherLeTerrain() const;
+
 private :
 /** terrain sur lequel le jeu se passe */
     terrain d_terrainDeJeu;

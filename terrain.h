@@ -17,12 +17,14 @@ public:
 
 /**
 Renvoi le nombre de balle sur le terrain
+    @return le nombre de balles du terrain
 */
     int getNbBalle() const;
 
 
 /**
 Renvoi la précision souhaité pour le calcul des collisions
+    @return La precision du calcul de collision souhaité
 */
     int getPrecisionCollision() const;
 
@@ -30,20 +32,36 @@ Renvoi la précision souhaité pour le calcul des collisions
 
 /**
 Renvoi le pointeur d'element de la case i du tableau d'elements
+    @param[in] i - l'index du tableau d'element
+    @return le pointeur d'element de la case i
 */
     element* getElement(int i) const;
 
 
 /**
-Renvoi le pointeur d'element de la case i du tableau d'elements mouvant
+Renvoi le pointeur d'elementMouvant de la case i du tableau d'elementMouvant
+    @param[in] i - l'index du tableau d'elementMouvant
+    @return le pointeur d'elementMouvant de la case i
 */
-    element* getElementMouvant(int i) const;
+    elementMouvant* getElementMouvant(int i) const;
 
+
+/**
+Renvoi le tableau d'elements du terrain
+    @return le tableau d'element du terrain
+*/
+    std::vector<element*> getElement() const;
+
+
+/**
+Renvoi le tableau d'elementMouvants du terrain
+    @return le tableau d'elementMouvants du terrain
+*/
+    std::vector<elementMouvant*> getElementmouvant() const;
 
 
 /**
 Fait passer un tour au terrain
-    @return vrai si il y a collision, faux sinon
 */
     void boucleDeJeu() ;
 
