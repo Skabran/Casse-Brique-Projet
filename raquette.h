@@ -24,6 +24,22 @@ Constructeur de la raquette. Créer un element mouvant de position (x,y) de longu
 ///Destructeur par default de la raquette
     ~raquette();
 
+
+/**
+Renvoie la longueur de la raquette
+    @return La longueur de la raquette
+*/
+    double getLongueurRaquette() const;
+
+
+/**
+Renvoie la largeur de la raquette
+    @return La largeur de la raquette
+*/
+    double getLargeurRaquette() const;
+
+
+
 /**
 Déplace la raquette en fonction de l'utilisateur
 q a gauche

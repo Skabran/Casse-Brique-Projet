@@ -1,4 +1,5 @@
 #include "raquette.h"
+#include "affichageJeu.h"
 
 raquette::raquette(): elementMouvant{}, d_longueur{4.0}, d_largeur{2.0} {}
 
@@ -6,6 +7,18 @@ raquette::raquette(double x, double y, double longueur, double largeur): element
 d_longueur{longueur}, d_largeur{largeur} {}
 
 raquette::~raquette() = default;
+
+double raquette::getLongueurRaquette() const
+{
+    return d_longueur;
+}
+
+
+double raquette::getLargeurRaquette() const
+{
+    return d_largeur;
+}
+
 
 bool raquette::testDeCollision(position posElementMouvant) {
 
@@ -23,7 +36,7 @@ void raquette::deplacer(){
 
 void raquette::afficheElement(const affichageJeu& affichage) const
 {
-
+    affichage.afficheRaquette(*this);
 }
 
 /*

@@ -3,6 +3,8 @@
 #include "graphics.h"
 #include "balle.h"
 #include "brique.h"
+#include "enveloppe.h"
+#include "calculateur.h"
 
 /**
 Classe permettant l'affichage du jeu et du terrain
@@ -26,6 +28,13 @@ Affiche un ecran de defaite au joueur
 */
     void afficheDefaite() const;
 
+
+/**
+Affiche une enveloppe rectangulaire
+*/
+    void afficheEnveloppe(const enveloppe& env) const;
+
+
 /**
 Affiche une balle
     @param[in] balleAAfficher - La balle que l'on désire tracer
@@ -38,6 +47,13 @@ Affiche une brique
     @param[in] briqueAAfficher - La brique que l'on désire tracer
 */
     void afficheBrique(const brique& briqueAAfficher) const;
+
+
+/**
+Affiche une raquette
+    @param[in] raquetteAAfficher - La raquette que l'on désire tracer
+*/
+    void afficheRaquette(const raquette& raquetteAAfficher) const;
 
 private:
 

@@ -65,3 +65,34 @@ enveloppe calculateur::calculEnveloppe(const brique& brique1)
     enveloppe env{coinHG, coinHD, coinBG, coinBD};
     return env;
 }
+
+
+enveloppe calculateur::calculEnveloppe(const balle& balle1)
+{
+    double diametreBalle = balle1.getDiametre();
+    position centreBalle{balle1.getPosition()};
+
+    position coinHG = calculPointHG(centreBalle, diametreBalle , diametreBalle );
+    position coinHD = calculPointHD(centreBalle, diametreBalle , diametreBalle );
+    position coinBG = calculPointBG(centreBalle, diametreBalle , diametreBalle );
+    position coinBD = calculPointBD(centreBalle, diametreBalle , diametreBalle );
+
+    enveloppe env{coinHG, coinHD, coinBG, coinBD};
+    return env;
+}
+
+
+enveloppe calculateur::calculEnveloppe(const raquette& raquette1)
+{
+    double longueurRaquette = raquette1.getLongueurRaquette();
+    double largeurRaquette = raquette1.getLargeurRaquette();//
+    position centreRaquette{raquette1.getPosition()};
+
+    position coinHG = calculPointHG(centreRaquette, longueurRaquette , largeurRaquette );
+    position coinHD = calculPointHD(centreRaquette, longueurRaquette , largeurRaquette );
+    position coinBG = calculPointBG(centreRaquette, longueurRaquette , largeurRaquette );
+    position coinBD = calculPointBD(centreRaquette, longueurRaquette , largeurRaquette );
+
+    enveloppe env{coinHG, coinHD, coinBG, coinBD};
+    return env;
+}

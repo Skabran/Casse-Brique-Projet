@@ -1,4 +1,5 @@
 #include "brique.h"
+#include "affichageJeu.h"
 
 
 brique::brique(): element{}, d_longueur{4.0}, d_largeur{2.0} {}
@@ -33,5 +34,5 @@ void brique::effetCollision(element *elementPercute)
 
 void brique::afficheElement(const affichageJeu& affichage) const
 {
-
+    affichage.afficheBrique(*this);
 }

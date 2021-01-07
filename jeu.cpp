@@ -10,7 +10,7 @@ void jeu::menuPrincipal()
 {
     int choix;
 
-    std::cout << std::endl << "Menu principal : " << std::endl << std::endl;
+    std::cout << std::endl << "Menu Principal : " << std::endl << std::endl;
 	std::cout << "1\t - Lancer une partie" << std::endl;
 	std::cout << "2\t - Changer les parametres partie" << std::endl;
 	std::cout << "3\t - Choisir un terrain" << std::endl;
