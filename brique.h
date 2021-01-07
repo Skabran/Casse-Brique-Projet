@@ -9,10 +9,10 @@ Classe de la brique de base du jeu. Herite de la classe element
 */
 class brique : public element{
 public:
-///Constructeur par default de la brique. Element par default d_longueur = 40.0 et d_largeur = 20.0
+///Constructeur par default de la brique. Element par default d_longueur = 60.0 et d_largeur = 30.0
     brique();
 ///Constructeur de la brique. Element(x, y), d_longueur = longueur et d_largeur = largeur
-    brique(double x, double y, double longueur=40, double largeur=20);
+    brique(double x, double y, double longueur=60, double largeur=30);
 ///Destructeur de la brique par default
     ~brique();
 

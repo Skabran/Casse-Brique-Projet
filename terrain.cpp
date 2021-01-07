@@ -31,6 +31,18 @@ int terrain::getNbBalle() const
 }
 
 
+int terrain::getLongueurTerrain() const
+{
+    return d_longueurTerrain;
+}
+
+
+int terrain::getLargeurTerrain() const
+{
+    return d_largeurTerrain;
+}
+
+
 int terrain::getPrecisionCollision() const
 {
     return d_precisionCollision;

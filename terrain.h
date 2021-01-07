@@ -22,14 +22,28 @@ public:
 
 
 /**
-Renvoi le nombre de balle sur le terrain
+Renvoie le nombre de balle sur le terrain
     @return le nombre de balles du terrain
 */
     int getNbBalle() const;
 
 
 /**
-Renvoi la précision souhaité pour le calcul des collisions
+Renvoie la longueur du terrain
+    @return La longueur du terrain
+*/
+    int getLongueurTerrain() const;
+
+
+/**
+Renvoie la largeur du terrain
+    @return La largeur du terrain
+*/
+    int getLargeurTerrain() const;
+
+
+/**
+Renvoie la précision souhaité pour le calcul des collisions
     @return La precision du calcul de collision souhaité
 */
     int getPrecisionCollision() const;

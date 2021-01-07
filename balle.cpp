@@ -2,7 +2,7 @@
 #include "affichageJeu.h"
 
 
-balle::balle(): elementMouvant{}, d_diametre{10.0} {}
+balle::balle(): elementMouvant{}, d_diametre{30.0} {}
 
 balle::balle(double x, double y, double diametre): elementMouvant{x, y}, d_diametre{diametre} {}
 
