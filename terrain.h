@@ -85,15 +85,32 @@ Fait passer un tour au terrain
 */
     void boucleDeJeu(const affichageJeu& afficheur) ;
 
+/**
+Fonction qui gère la boucle de collision d'un elementMouvant avec le reste du tableau d'element
+    @param[in] indexElemM - index de l'elementMouvant dans le tableau d'elementMouvant
+*/
+    void collisionElemM(int indexElemM);
+
 
 /**
-Test la collision entre un element et le reste du terrain avec une précision donnée.
+Appellé si il y a collision.
+Fais parcourir la distance qui sépare les deux element, calcul la distance restante a parcourir
+et appelle recursivement collisionElemM pour vérifier si il n'y a pas d'autre element en collisions
+sur le chemin restant
+    @param[in,out] elemM - L'elementMouvant qui en percute un autre
+    @param[in,out] elem - l'element fixe qui est percuté
+*/
+    void approchePasAPas(elementMouvant& elemM, element& elem);
+
+
+/**
+Test la collision entre un elementMouvant et le reste du terrain avec une précision donnée.
 Renvoi l'indice de l'element avec lequel il y a collision
     @param[in] elementMouvant - element que l'on doit tester
     @param[in] precision - precision des test de collision souhaité
     @return indice du premier element en collision. -1 si pas de collision.
 */
-    int collisionTotale(int indiceElementQuiBouge, int precision) const;
+    int collisionToutTableauElement(int indiceElementQuiBouge, int precision) const;
 
 
 /**
@@ -104,7 +121,7 @@ Permet a collisionTotal de ne pas calculer la collision de l'element avec lui mê
     @param[in] positionElementMouvant - position de l'element a tester
     @return indice du premier element en collision. -1 si pas de collision.
 */
-    int collisionPartielle(int indiceDebut, int indiceFin, const element *elementQuiBouge) const;
+    int collisionPartieDuTableau(int indiceDebut, int indiceFin, const element *elementQuiBouge) const;
 
 
 /**

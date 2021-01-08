@@ -75,17 +75,7 @@ void terrain::boucleDeJeu(const affichageJeu& afficheur)
 
     for(int i = 0; i<d_nbBalle;i++)
     {
-        int elementCollision = collisionTotale(i, d_precisionCollision);
-        if(elementCollision==-1)
-        {
-            deplacerElementMouvant(i);  //Pas de collision, la balle se déplace de tout son vecteur vitesse
-        }
-        else //ERREUR LA DEDANS
-        {
-            vecteur copiePourCalcul;
-            copiePourCalcul=d_tableauElementMouvant[i]->getVecteur();
-            effetCollisionDeuxElements(d_tableauElementMouvant[i], d_tableauElement[elementCollision] ); //on applique l'effet de la collision entre la balle et l'element qu'elle rencontre
-        }
+        collisionElemM(i);
     }
 
     if(testPartieFinie()!=0)    //plus efficace car c'est le test le plus susceptible d'etre faux
@@ -114,15 +104,34 @@ void terrain::boucleDeJeu(const affichageJeu& afficheur)
     getch();
 }
 
+void terrain::collisionBalle(int indexElemM)
+{
+    double distanceAParcourrir=d_tableauElementMouvant[i]->getVecteur().getVitesse();
+    while(distanceAParcourrir>0)
+    {
+        int elementCollision = collisionToutTableauElement(indexElemM, d_precisionCollision);
+        if(elementCollision==-1)
+        {
+            deplacerElementMouvant(indexElemM);  //Pas de collision, la balle se déplace de tout son vecteur vitesse
+            distanceAParcourrir=0;
+        }
+        else
+        {
 
+            vecteur copiePourCalcul;
+            copiePourCalcul=d_tableauElementMouvant[indexElemM]->getVecteur();
+            effetCollisionDeuxElements(d_tableauElementMouvant[indexElemM], d_tableauElement[elementCollision] ); //on applique l'effet de la collision entre la balle et l'element qu'elle rencontre
+        }
+    }
+}
 
-int terrain::collisionTotale(int indiceElementQuiBouge, int precision) const
+int terrain::collisionToutTableauElement(int indiceElementQuiBouge, int precision) const
 {
     int elementCollision;
     int j = precision;                  //Pas obligatoire mais plus claire pour les iterations
     balle* elementTemp;
     elementTemp = new balle{};          //Car ce sera en générale une balle et qu'on ne peut pas créer d'element mouvant (classe virtuelle)
-    position positionElementQuiBouge = d_tableauElement[indiceElementQuiBouge]->getPosition();
+    position positionElementQuiBouge = d_tableauElementMouvant[indiceElementQuiBouge]->getPosition();
     vecteur vecteurElementQuiBouge = d_tableauElementMouvant[indiceElementQuiBouge]->getVecteur();
 
     while(j>0&&elementCollision==-1)
@@ -133,11 +142,11 @@ int terrain::collisionTotale(int indiceElementQuiBouge, int precision) const
         elementTemp->changeVecteur(vecteurTemp);
 
         //première partie du tableau
-        elementCollision = collisionPartielle(0, indiceElementQuiBouge, elementTemp);
+        elementCollision = collisionPartieDuTableau(0, indiceElementQuiBouge, elementTemp);
         //deuxième partie du tableau
         if(elementCollision==-1)
         {
-            elementCollision=collisionPartielle(indiceElementQuiBouge+1, d_tableauElement.size(), elementTemp);
+            elementCollision=collisionPartieDuTableau(indiceElementQuiBouge+1, d_tableauElement.size(), elementTemp);
         }
         j--;
     }
@@ -146,7 +155,7 @@ int terrain::collisionTotale(int indiceElementQuiBouge, int precision) const
 }
 
 
-int terrain::collisionPartielle(int indiceDebut, int indiceFin, const element *elementQuiBouge) const
+int terrain::collisionPartieDuTableau(int indiceDebut, int indiceFin, const element *elementQuiBouge) const
 {
     int elementCollision=-1;
     int h = indiceDebut;
