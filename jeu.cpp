@@ -45,7 +45,7 @@ void jeu::lancerPartie()
     int resultatPartie=0;
     while(resultatPartie==0)
     {
-        d_terrainDeJeu.boucleDeJeu();
+        d_terrainDeJeu.boucleDeJeu(d_affichage);
         resultatPartie=d_terrainDeJeu.testPartieFinie();
     }
     if(resultatPartie==1)
@@ -86,7 +86,8 @@ void jeu::afficherLeTerrain() const
 
 void jeu::choixTerrain()
 {
-
+    rempliListeTerrain();
+    //A faire (donne le choix du terrain via un numéro
 }
 
 int jeu::litTerrain(const std::string& nomFichier)
@@ -98,4 +99,9 @@ int jeu::litTerrain(const std::string& nomFichier)
 std::vector<std::string> jeu::getListeTerrain() const
 {
     return d_listeTerrain;
+}
+
+void jeu::rempliListeTerrain()
+{
+    //A faire
 }

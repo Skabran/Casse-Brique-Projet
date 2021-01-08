@@ -83,7 +83,7 @@ Renvoi le tableau d'elementMouvants du terrain
 /**
 Fait passer un tour au terrain
 */
-    void boucleDeJeu() ;
+    void boucleDeJeu(const affichageJeu& afficheur) ;
 
 
 /**
@@ -117,11 +117,11 @@ Test si deux element rentre en collision
 
 
 /**
-Demande a deux element d'appliquer leurs effets de collision
-    @param[in] premierElement - Premier element a faire entrer en collision. Si possible l'element mouvant.
-    @param[in] deuxiemeElement - Second element a faire entrer en collision.
+Demande a une element mouvant et un element d'appliquer leurs collisions
+    @param[in] premierElement - ElementMouvant qui rentre en collision
+    @param[in] deuxiemeElement - element qui subit une collision
 */
-    void effetCollisionDeuxElements(element *premierElement, element *deuxiemeElement);
+    void effetCollisionDeuxElements(elementMouvant *premierElement, element *deuxiemeElement);
 
 
 /**

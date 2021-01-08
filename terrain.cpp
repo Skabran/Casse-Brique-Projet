@@ -6,10 +6,7 @@ terrain::terrain():d_longueurTerrain{780}, d_largeurTerrain{800}, d_nbBalle{0}, 
  d_tableauElement{}, d_tableauElementMouvant{} {}
 
 terrain::terrain(const std::string& nomFichier) : d_longueurTerrain{}, d_largeurTerrain{},
-d_nbBalle{}, d_precisionCollision{}, d_tableauElement{}, d_tableauElementMouvant{}
-{
-
-}
+d_nbBalle{}, d_precisionCollision{}, d_tableauElement{}, d_tableauElementMouvant{} {}
 
 terrain::~terrain()
 {
@@ -72,7 +69,8 @@ std::vector<elementMouvant*> terrain::getElementmouvant() const
     return d_tableauElementMouvant;
 }
 
-void terrain::boucleDeJeu()
+
+void terrain::boucleDeJeu(const affichageJeu& afficheur)
 {
 
     for(int i = 0; i<d_nbBalle;i++)
@@ -80,14 +78,39 @@ void terrain::boucleDeJeu()
         int elementCollision = collisionTotale(i, d_precisionCollision);
         if(elementCollision==-1)
         {
-            deplacerElementMouvant(i);  //Pas de collision, la balle se déplace de tout son vecteur
+            deplacerElementMouvant(i);  //Pas de collision, la balle se déplace de tout son vecteur vitesse
+        }
+        else //ERREUR LA DEDANS
+        {
+            vecteur copiePourCalcul;
+            copiePourCalcul=d_tableauElementMouvant[i]->getVecteur();
+            effetCollisionDeuxElements(d_tableauElementMouvant[i], d_tableauElement[elementCollision] ); //on applique l'effet de la collision entre la balle et l'element qu'elle rencontre
+        }
+    }
+
+    if(testPartieFinie()!=0)    //plus efficace car c'est le test le plus susceptible d'etre faux
+    {
+        if(testPartieFinie()==1)
+        {
+            afficheur.afficheVictoire();    //Victoire du joueur
+            getch();
+            return;
         }
         else
         {
-            effetCollisionDeuxElements(d_tableauElement[i], d_tableauElement[elementCollision] ); //on applique l'effet de la collision entre la balle et l'element qu'elle rencontre
-        }//a faire
+            afficheur.afficheDefaite();     //Defaite du joueur
+            getch();
+            return;
+        }
     }
-    //deplacer afficheur dans terrrain
+
+    afficheur.afficheTerrain(*this);
+    //pas besoin de getch ici car l'affichage se met en pose pour attendre que l'utilisateur bouge la raquette
+    for(int i=d_nbBalle; i<d_tableauElementMouvant.size(); i++)
+    {
+        deplacerElementMouvant(i); //Deplace le reste des elementMouvant
+    }
+    afficheur.afficheTerrain(*this);
     getch();
 }
 
@@ -147,7 +170,7 @@ bool terrain::testCollisionDeuxElement(const element *premierElement,const eleme
 }
 
 
-void terrain::effetCollisionDeuxElements(element *premierElement, element *deuxiemeElement)
+void terrain::effetCollisionDeuxElements(elementMouvant *premierElement, element *deuxiemeElement)
 {
     premierElement->effetCollision(deuxiemeElement);
     deuxiemeElement->effetCollision(premierElement);

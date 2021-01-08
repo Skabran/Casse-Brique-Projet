@@ -71,6 +71,12 @@ Renvoie la liste des noms de fichiers de terrains de jeu
     std::vector<std::string> getListeTerrain() const;
 
 
+/**
+Regarde dans le dossier du projet si il y a d'autre fichier .txt et les ajoute a la liste de terrain
+*/
+    void rempliListeTerrain();
+
+
 private :
 /** terrain sur lequel le jeu se passe */
     terrain d_terrainDeJeu;

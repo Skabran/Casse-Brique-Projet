@@ -21,6 +21,11 @@ bool balle::testDeCollision(position posElementMouvant) {
 
 }
 
+void balle::effetCollision(elementMouvant *elementPercute)
+{
+
+}
+
 void balle::effetCollision(element *elementPercute)
 {
 

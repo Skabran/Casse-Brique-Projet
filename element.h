@@ -3,6 +3,7 @@
 #include "position.h"
 
 class affichageJeu;
+class elementMouvant;
 
 /**
 Classe des element appartenant au jeu
@@ -39,10 +40,11 @@ Test si il y a collision entre cet element et la position passé en paramettre
 
 /**
 Methode virtuelle
-Applique l'effet d'une collision sur cet element
+Applique l'effet d'une collision d'un elementMouvant sur cet element
+On passe l'elementMouvant en parametre pour plus tard si l'on veut créer des briques qui accélèrent la balle lorsqu'elle les touche
     @return d_positionElement - position de l'element
 */
-    virtual void effetCollision(element *elementPercute)=0;
+    virtual void effetCollision(elementMouvant *elementPercute)=0;
 
 
 /**

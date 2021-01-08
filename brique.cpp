@@ -26,7 +26,7 @@ bool brique::testDeCollision(position posElementMouvant) {
 
 }
 
-void brique::effetCollision(element *elementPercute)
+void brique::effetCollision(elementMouvant *elementPercute)
 {
 
 }

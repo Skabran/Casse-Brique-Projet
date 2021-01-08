@@ -55,7 +55,14 @@ A FAIRE
 
 
 /**
-Applique l'effet d'une collision sur cet element
+Applique l'effet d'une collision d'un elementMouvant sur cet element
+    @return d_positionElement - position de l'element
+*/
+    void effetCollision(elementMouvant *elementPercute) override final;
+
+
+/**
+Applique l'effet d'une collision sur un element
     @return d_positionElement - position de l'element
 */
     void effetCollision(element *elementPercute) override final;

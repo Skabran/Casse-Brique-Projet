@@ -49,10 +49,18 @@ A FAIRE
 
 /**
 Methode virtuelle
-Applique l'effet d'une collision sur cet element
+Applique l'effet d'une collision d'un elementMouvant sur cet element
     @return d_positionElement - position de l'element
 */
-    virtual void effetCollision(element *elementPercute) override=0;
+    virtual void effetCollision(elementMouvant *elementPercute) override=0;
+
+
+/**
+Methode virtuelle
+Applique l'effet d'une collision sur un element
+    @return d_positionElement - position de l'element
+*/
+    virtual void effetCollision(element *elementPercute)=0;
 
 
 /**
@@ -60,6 +68,16 @@ Methode virtuelle
 Demande à l'afficheur d'afficher l'element
 */
     virtual void afficheElement(const affichageJeu& affichage) const override  =0;
+
+
+/**
+Operateur = : remplace la position et le vecteur du premier elementMouvant par ceux du second
+    @param[in] elem - elementMouvant a copier
+    @return l'elementMouvant dont les parametres sont changés
+*/
+    elementMouvant& operator=(const elementMouvant& elem);
+
+
 
 private:
 /** vecteur vitesse de l'element mouvant */

@@ -21,3 +21,9 @@ void elementMouvant::changeVecteur(const vecteur& vect)
 {
     d_vecteurVitesse=vect;
 }
+
+elementMouvant& elementMouvant::operator=(const elementMouvant& elem)
+{
+    changePosition(elem.getPosition());
+    d_vecteurVitesse=elem.getVecteur();
+}

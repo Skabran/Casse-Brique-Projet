@@ -24,6 +24,11 @@ bool raquette::testDeCollision(position posElementMouvant) {
 
 }
 
+void raquette::effetCollision(elementMouvant *elementPercute)
+{
+
+}
+
 void raquette::effetCollision(element *elementPercute)
 {
 

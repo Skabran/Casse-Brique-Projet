@@ -38,7 +38,7 @@ Methode virtuelle
 Applique l'effet d'une collision sur cet element
     @return d_positionElement - position de l'element
 */
-    void effetCollision(element *elementPercute) override;
+    void effetCollision(elementMouvant *elementPercute) override;
 
 
 /**
