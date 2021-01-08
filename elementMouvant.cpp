@@ -8,6 +8,8 @@ elementMouvant::elementMouvant(double x, double y): element{x, y}, d_vecteurVite
 elementMouvant::elementMouvant(double x, double y, double vitesse, double angle): element{x, y},
 d_vecteurVitesse{vitesse, angle} {}
 
+elementMouvant::elementMouvant(position pos, double vitesse, double angle) : element{pos}, d_vecteurVitesse{vitesse, angle} {}
+
 elementMouvant::elementMouvant(position pos, vecteur vect):element{pos}, d_vecteurVitesse{vect} {}
 
 elementMouvant::~elementMouvant() = default;

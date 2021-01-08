@@ -16,6 +16,8 @@ public:
     elementMouvant(double x, double y);
 ///Constructeur a deux valeurs position(x,y) et vecteur vitesse(vitesse, angle)
     elementMouvant(double x, double y, double vitesse, double angle);
+///Constructeur a partir d'une position et d'une vitesse et d'un angle
+    elementMouvant(position pos, double vitesse, double angle);
 ///Constructeur a partir d'une position et d'un vecteur
     elementMouvant(position pos, vecteur vect);
 ///Destructeur par default

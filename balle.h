@@ -15,6 +15,9 @@ public:
 ///Constructeur de balle de position (x,y) et de diametre "diametre"
     balle(double x, double y, double diametre=30);
 
+///Constructeur de balle a partir d'une position(x,y) d'une vitesse d'un angle et d'un diametre
+    balle(const position& pos, double vitesse, double angle, double diametre=30);
+
 ///Constructeur de balle de position (x,y)  de diametre "diametre". Construit aussi son vecteur (vitesse, angle)
     balle(double x, double y, double vitesse, double angle, double diametre=30);
 
