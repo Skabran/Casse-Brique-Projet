@@ -14,6 +14,16 @@ double vecteur::getAngle() const{
     return d_angle;
 }
 
+void vecteur::changeVitesse(double vitesse)
+{
+    d_vitesse=vitesse;
+}
+
+void vecteur::changeAngle(double angle)
+{
+    d_angle=angle;
+}
+
 void vecteur::multiplieVitesse(double coef){
     d_vitesse*=coef;
 }

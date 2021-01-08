@@ -1,5 +1,6 @@
 #include "terrain.h"
 #include "affichageJeu.h"
+#include "calculateur.h"
 
 
 terrain::terrain():d_longueurTerrain{780}, d_largeurTerrain{800}, d_nbBalle{0}, d_precisionCollision{1},
@@ -104,12 +105,16 @@ void terrain::boucleDeJeu(const affichageJeu& afficheur)
     getch();
 }
 
-void terrain::collisionBalle(int indexElemM)
+
+void terrain::collisionElemM(int indexElemM)
 {
-    double distanceAParcourrir=d_tableauElementMouvant[i]->getVecteur().getVitesse();
+    elementMouvant* elemM = d_tableauElementMouvant[indexElemM];
+    double vitesseElemM=elemM->getVecteur().getVitesse();
+    double distanceAParcourrir=vitesseElemM;
     while(distanceAParcourrir>0)
     {
         int elementCollision = collisionToutTableauElement(indexElemM, d_precisionCollision);
+
         if(elementCollision==-1)
         {
             deplacerElementMouvant(indexElemM);  //Pas de collision, la balle se déplace de tout son vecteur vitesse
@@ -117,13 +122,24 @@ void terrain::collisionBalle(int indexElemM)
         }
         else
         {
-
-            vecteur copiePourCalcul;
-            copiePourCalcul=d_tableauElementMouvant[indexElemM]->getVecteur();
-            effetCollisionDeuxElements(d_tableauElementMouvant[indexElemM], d_tableauElement[elementCollision] ); //on applique l'effet de la collision entre la balle et l'element qu'elle rencontre
+            approchePasAPas(elemM, d_tableauElement[elementCollision], distanceAParcourrir);
         }
     }
+    elemM->getVecteur().changeVitesse(vitesseElemM); //Après les calculs ont redonne a l'élémentmouvant sa vitesse d'origine
 }
+
+
+void terrain::approchePasAPas(elementMouvant* elemM, element* elem, double& distanceAParcourir)
+{
+    elemM->getVecteur().changeVitesse(distanceAParcourir);//a chaque parcour du while on ne garde que la distance restante
+    calculateur calc{};
+    double distanceApproche;
+    distanceApproche=calc.distance(elemM->getPosition(), elem->getPosition());
+    elemM->deplaceDistance(distanceApproche);
+    effetCollisionDeuxElements(elemM,elem);
+    distanceAParcourir=elemM->getVecteur().getVitesse() - distanceApproche;
+}
+
 
 int terrain::collisionToutTableauElement(int indiceElementQuiBouge, int precision) const
 {
@@ -153,6 +169,8 @@ int terrain::collisionToutTableauElement(int indiceElementQuiBouge, int precisio
     delete elementTemp;
     return elementCollision;
 }
+
+
 
 
 int terrain::collisionPartieDuTableau(int indiceDebut, int indiceFin, const element *elementQuiBouge) const

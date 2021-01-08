@@ -99,8 +99,9 @@ et appelle recursivement collisionElemM pour vérifier si il n'y a pas d'autre el
 sur le chemin restant
     @param[in,out] elemM - L'elementMouvant qui en percute un autre
     @param[in,out] elem - l'element fixe qui est percuté
+    @param[in,out] distanceAParcourir - distance qu'il reste a parcourir a l'elementMouvant
 */
-    void approchePasAPas(elementMouvant& elemM, element& elem);
+    void approchePasAPas(elementMouvant* elemM, element* elem, double& distanceAParcourir);
 
 
 /**
@@ -198,7 +199,7 @@ private:
 
 /** Tableau comprenant tout les elements mouvant du terrain */
     std::vector<elementMouvant*> d_tableauElementMouvant;
-//Ajouter longueur et largeur du terrain
+
 };
 
 #endif // TERRAIN_H

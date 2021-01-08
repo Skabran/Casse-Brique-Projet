@@ -31,7 +31,6 @@ Change la position de l'element e la remplaçant par la position passé en paramet
 */
     void changePosition(const position& pos);
 
-//A PASSER en global comme effetCollision ??? (sans doute)
 /**
 Methode virtuelle
 Test si il y a collision entre cet element et la position passé en paramettre

@@ -29,3 +29,11 @@ elementMouvant& elementMouvant::operator=(const elementMouvant& elem)
     changePosition(elem.getPosition());
     d_vecteurVitesse=elem.getVecteur();
 }
+
+void elementMouvant::deplaceDistance(const double& distance)
+{
+    vecteur nouveauVecteur{distance,d_vecteurVitesse.getAngle()};
+    position nouvellePosition{};
+    nouvellePosition=getPosition()+nouveauVecteur;
+    changePosition(nouvellePosition);
+}

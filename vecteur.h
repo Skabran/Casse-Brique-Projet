@@ -25,6 +25,19 @@ Retourne la valeur de l'angle du vecteur
 */
     double getAngle() const;
 
+
+/**
+Change la vitesse du vecteur
+    @param[in] vitesse - nouvelle vitesse
+*/
+    void changeVitesse(double vitesse);
+
+/**
+Change l'angle du vecteur
+    @param[in] angle - nouvel angle
+*/
+    void changeAngle(double angle);
+
 /**
 Multiplie la norme du vecteur vitesse par un coeficient coef
     @param[in] coef - coefficient multiplicateur

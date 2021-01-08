@@ -80,6 +80,13 @@ Operateur = : remplace la position et le vecteur du premier elementMouvant par c
     elementMouvant& operator=(const elementMouvant& elem);
 
 
+/**
+Deplace l'elementMouvant d'une distance selon son vecteur vitesse
+    @param[in] distance - distance a additionner a l'element mouvant
+*/
+    void deplaceDistance(const double& distance);
+
+
 
 private:
 /** vecteur vitesse de l'element mouvant */

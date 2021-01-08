@@ -4,7 +4,7 @@ calculateur::calculateur() {}
 
 calculateur::~calculateur() {}
 
-position calculateur::calculPointHG(const position& positionCentre, const double longueur, const double largeur)
+position calculateur::calculPointHG(const position& positionCentre, const double longueur, const double largeur) const
 {
     position pos;
     double nouveauX;
@@ -16,7 +16,7 @@ position calculateur::calculPointHG(const position& positionCentre, const double
 }
 
 
-position calculateur::calculPointHD(const position& positionCentre, const double longueur, const double largeur)
+position calculateur::calculPointHD(const position& positionCentre, const double longueur, const double largeur) const
 {
     position pos;
     double nouveauX;
@@ -27,7 +27,7 @@ position calculateur::calculPointHD(const position& positionCentre, const double
     return pos;
 }
 
-position calculateur::calculPointBG(const position& positionCentre, const double longueur, const double largeur)
+position calculateur::calculPointBG(const position& positionCentre, const double longueur, const double largeur) const
 {
     position pos;
     double nouveauX;
@@ -39,7 +39,7 @@ position calculateur::calculPointBG(const position& positionCentre, const double
 }
 
 
-position calculateur::calculPointBD(const position& positionCentre, const double longueur, const double largeur)
+position calculateur::calculPointBD(const position& positionCentre, const double longueur, const double largeur) const
 {
     position pos;
     double nouveauX;
@@ -51,7 +51,7 @@ position calculateur::calculPointBD(const position& positionCentre, const double
 }
 
 
-enveloppe calculateur::calculEnveloppe(const brique& brique1)
+enveloppe calculateur::calculEnveloppe(const brique& brique1) const
 {
     double longueurBrique = brique1.getLongueurBrique();
     double largeurBrique = brique1.getLargeurBrique();
@@ -67,7 +67,7 @@ enveloppe calculateur::calculEnveloppe(const brique& brique1)
 }
 
 
-enveloppe calculateur::calculEnveloppe(const balle& balle1)
+enveloppe calculateur::calculEnveloppe(const balle& balle1) const
 {
     double diametreBalle = balle1.getDiametre();
     position centreBalle{balle1.getPosition()};
@@ -82,7 +82,7 @@ enveloppe calculateur::calculEnveloppe(const balle& balle1)
 }
 
 
-enveloppe calculateur::calculEnveloppe(const raquette& raquette1)
+enveloppe calculateur::calculEnveloppe(const raquette& raquette1) const
 {
     double longueurRaquette = raquette1.getLongueurRaquette();
     double largeurRaquette = raquette1.getLargeurRaquette();//
@@ -95,4 +95,15 @@ enveloppe calculateur::calculEnveloppe(const raquette& raquette1)
 
     enveloppe env{coinHG, coinHD, coinBG, coinBD};
     return env;
+}
+
+double calculateur::distance(const position& pos1, const position& pos2) const
+{
+    double X1, X2, Y1, Y2, distance;
+    X1=pos1.valeurX();
+    Y1=pos1.valeurY();
+    X2=pos2.valeurX();
+    Y2=pos2.valeurY();
+    distance = sqrt(pow(X2 - X1,2)+ pow(Y2 - Y1,2));
+    return distance;
 }

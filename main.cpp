@@ -19,8 +19,8 @@ void testGraphics()
 //    j.afficherLeTerrain();
     terrain t{};
     t.litTerrain("terrainParDefault");
-   // aff.afficheTerrain(t);
-    t.boucleDeJeu(aff);
+   aff.afficheTerrain(t);
+    //t.boucleDeJeu(aff);
    getch();
     closegraph();
 
@@ -31,6 +31,6 @@ int main()
 {
     jeu jeuPrincipal{};
     testGraphics();
-    //jeuPrincipal.menuPrincipal();
+    jeuPrincipal.menuPrincipal();
     return 0;
 }
