@@ -42,6 +42,7 @@ void jeu::menuPrincipal()
 void jeu::lancerPartie()
 {
     opengraphsize(d_terrainDeJeu.getLongueurTerrain()+10,d_terrainDeJeu.getLargeurTerrain()); //+10 car la fenetre s'ouvre un petit peut trop a gauche pour une raison que j'ignore
+    d_affichage.afficheTerrain(d_terrainDeJeu);
     int resultatPartie=0;
     while(resultatPartie==0)
     {

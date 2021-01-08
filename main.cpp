@@ -30,7 +30,7 @@ void testGraphics()
 int main()
 {
     jeu jeuPrincipal{};
-    testGraphics();
+    //testGraphics();
     jeuPrincipal.menuPrincipal();
     return 0;
 }

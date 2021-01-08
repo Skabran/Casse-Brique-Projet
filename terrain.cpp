@@ -206,7 +206,7 @@ void terrain::effetCollisionDeuxElements(elementMouvant *premierElement, element
 
 int terrain::testPartieFinie() const
 {
-    return 0;
+
 }
 
 
